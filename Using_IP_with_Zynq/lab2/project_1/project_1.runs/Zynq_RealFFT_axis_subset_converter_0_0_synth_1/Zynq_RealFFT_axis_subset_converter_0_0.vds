@@ -1,0 +1,465 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Jan  6 00:20:07 2019
+# Process ID: 16667
+# Current directory: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1
+# Command line: vivado -log Zynq_RealFFT_axis_subset_converter_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_RealFFT_axis_subset_converter_0_0.tcl
+# Log file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/Zynq_RealFFT_axis_subset_converter_0_0.vds
+# Journal file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source Zynq_RealFFT_axis_subset_converter_0_0.tcl -notrace
+Command: synth_design -top Zynq_RealFFT_axis_subset_converter_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16738 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1261.035 ; gain = 85.996 ; free physical = 117 ; free virtual = 3345
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/synth/Zynq_RealFFT_axis_subset_converter_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'top_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/top_Zynq_RealFFT_axis_subset_converter_0_0.v:60]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000010011 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000010011 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DEFAULT_TLAST bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_subset_converter_v1_1_15_core' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ipshared/6ad2/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000010011 
+	Parameter C_M_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000010011 
+	Parameter C_DEFAULT_TLAST bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SIGNAL_SET_XOR bound to: 32'b00000000000000000000000000000000 
+	Parameter P_SIGNAL_SET_ADD bound to: 32'b00000000000000000000000000000000 
+	Parameter P_SIGNAL_SET_REM bound to: 32'b00000000000000000000000000000000 
+	Parameter P_TLAST_CNTR_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_subset_converter_v1_1_15_core' (1#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ipshared/6ad2/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-638] synthesizing module 'tdata_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tdata_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tdata_Zynq_RealFFT_axis_subset_converter_0_0' (2#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tdata_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tuser_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tuser_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tuser_Zynq_RealFFT_axis_subset_converter_0_0' (3#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tuser_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tid_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tid_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TID_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tid_Zynq_RealFFT_axis_subset_converter_0_0' (4#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tid_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tdest_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tdest_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tdest_Zynq_RealFFT_axis_subset_converter_0_0' (5#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tdest_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tstrb_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tstrb_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tstrb_Zynq_RealFFT_axis_subset_converter_0_0' (6#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tstrb_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tkeep_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tkeep_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tkeep_Zynq_RealFFT_axis_subset_converter_0_0' (7#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tkeep_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-638] synthesizing module 'tlast_Zynq_RealFFT_axis_subset_converter_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tlast_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+	Parameter C_S_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tlast_Zynq_RealFFT_axis_subset_converter_0_0' (8#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/tlast_Zynq_RealFFT_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-256] done synthesizing module 'top_Zynq_RealFFT_axis_subset_converter_0_0' (9#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/hdl/top_Zynq_RealFFT_axis_subset_converter_0_0.v:60]
+INFO: [Synth 8-256] done synthesizing module 'Zynq_RealFFT_axis_subset_converter_0_0' (10#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/synth/Zynq_RealFFT_axis_subset_converter_0_0.v:58]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tid[0]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[31]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[30]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[29]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[28]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[27]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[26]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[25]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[24]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[23]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[22]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[21]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[20]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[19]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[18]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[17]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[16]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[15]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[14]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[13]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[12]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[11]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[10]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[9]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[8]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[7]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[6]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[5]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[4]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[3]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[2]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[1]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[0]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tuser[0]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdest[0]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[3]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[2]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[1]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[0]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[3]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[2]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[1]
+WARNING: [Synth 8-3331] design tlast_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[31]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[30]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[29]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[28]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[27]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[26]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[25]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[24]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[23]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[22]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[21]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[20]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[19]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[18]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[17]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[16]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[15]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[14]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[13]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[12]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[11]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[10]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[9]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[8]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[7]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[6]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[5]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[4]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[3]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[2]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[1]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tuser[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tid[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdest[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[3]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[2]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[1]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tkeep[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[3]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[2]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[1]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tstrb[0]
+WARNING: [Synth 8-3331] design tkeep_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tlast
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[31]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[30]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[29]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[28]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[27]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[26]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[25]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[24]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[23]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[22]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[21]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[20]
+WARNING: [Synth 8-3331] design tstrb_Zynq_RealFFT_axis_subset_converter_0_0 has unconnected port tdata[19]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1302.566 ; gain = 127.527 ; free physical = 166 ; free virtual = 3359
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1302.566 ; gain = 127.527 ; free physical = 164 ; free virtual = 3357
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/Zynq_RealFFT_axis_subset_converter_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/Zynq_RealFFT_axis_subset_converter_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1556.582 ; gain = 0.000 ; free physical = 117 ; free virtual = 3080
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1556.582 ; gain = 381.543 ; free physical = 138 ; free virtual = 3130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1556.582 ; gain = 381.543 ; free physical = 138 ; free virtual = 3130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1556.582 ; gain = 381.543 ; free physical = 139 ; free virtual = 3131
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1556.582 ; gain = 381.543 ; free physical = 140 ; free virtual = 3132
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:33 . Memory (MB): peak = 1556.582 ; gain = 381.543 ; free physical = 139 ; free virtual = 3131
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:51 . Memory (MB): peak = 1599.582 ; gain = 424.543 ; free physical = 126 ; free virtual = 3087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:51 . Memory (MB): peak = 1599.582 ; gain = 424.543 ; free physical = 126 ; free virtual = 3087
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:51 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 126 ; free virtual = 3088
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 159 ; free virtual = 3106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------------------------------------------+------+
+|      |Instance |Module                                     |Cells |
++------+---------+-------------------------------------------+------+
+|1     |top      |                                           |     0|
+|2     |  inst   |top_Zynq_RealFFT_axis_subset_converter_0_0 |     0|
++------+---------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:52 . Memory (MB): peak = 1608.598 ; gain = 433.559 ; free physical = 158 ; free virtual = 3105
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 1608.598 ; gain = 179.543 ; free physical = 211 ; free virtual = 3159
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:53 . Memory (MB): peak = 1608.605 ; gain = 433.559 ; free physical = 219 ; free virtual = 3166
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:55 . Memory (MB): peak = 1619.598 ; gain = 457.934 ; free physical = 178 ; free virtual = 3127
+INFO: [Common 17-1381] The checkpoint '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/Zynq_RealFFT_axis_subset_converter_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/ip/Zynq_RealFFT_axis_subset_converter_0_0/Zynq_RealFFT_axis_subset_converter_0_0.xci
+INFO: [Common 17-1381] The checkpoint '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.runs/Zynq_RealFFT_axis_subset_converter_0_0_synth_1/Zynq_RealFFT_axis_subset_converter_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Zynq_RealFFT_axis_subset_converter_0_0_utilization_synth.rpt -pb Zynq_RealFFT_axis_subset_converter_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.30 . Memory (MB): peak = 1619.598 ; gain = 0.000 ; free physical = 255 ; free virtual = 3219
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  6 00:22:34 2019...

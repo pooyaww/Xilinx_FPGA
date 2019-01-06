@@ -1,0 +1,7 @@
+Running: xsim.dir/realfft_rtl_tb_behav/xsimk -simmode gui -wdb realfft_rtl_tb_behav.wdb -simrunnum 0 -socket 53077
+Design successfully loaded
+Design Loading Memory Usage: 68908 KB (Peak: 68908 KB)
+Design Loading CPU Usage: 230 ms
+Simulation completed
+Simulation Memory Usage: 159168 KB (Peak: 216180 KB)
+Simulation CPU Usage: 58620 ms

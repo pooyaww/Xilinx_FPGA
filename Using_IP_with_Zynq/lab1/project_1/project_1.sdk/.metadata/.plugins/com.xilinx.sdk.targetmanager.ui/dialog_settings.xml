@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="Zynq_Design_wrapper_hw_platform_0-device"/>
+	<item value="false" key="Zynq_Design_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Zynq_Design_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Zynq_Design_wrapper.bit" key="Zynq_Design_wrapper_hw_platform_0-bitFile"/>
+	<item value="Local" key="Zynq_Design_wrapper_hw_platform_0-target"/>
+	<item value="" key="Zynq_Design_wrapper_hw_platform_0-bmmFile"/>
+</section>

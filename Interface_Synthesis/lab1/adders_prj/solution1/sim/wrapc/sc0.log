@@ -1,0 +1,21 @@
+   Build using ""
+   Compiling apatb_adders.cpp
+   Compiling (apcc) adders_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'puya' on host 'puyaa.puyaa' (Linux_x86_64 version 4.9.0-8-amd64) on Wed Jan 02 17:18:55 CET 2019
+INFO: [HLS 200-10] On os Debian GNU/Linux 9.6 (stretch)
+INFO: [HLS 200-10] In directory '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_puya/59911546445936022977
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) adders.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'puya' on host 'puyaa.puyaa' (Linux_x86_64 version 4.9.0-8-amd64) on Wed Jan 02 17:19:02 CET 2019
+INFO: [HLS 200-10] On os Debian GNU/Linux 9.6 (stretch)
+INFO: [HLS 200-10] In directory '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_puya/60491546445942807444
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

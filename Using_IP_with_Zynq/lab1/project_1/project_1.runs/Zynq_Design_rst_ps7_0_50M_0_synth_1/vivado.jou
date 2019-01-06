@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jan  4 16:30:54 2019
+# Process ID: 24592
+# Current directory: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab1/project_1/project_1.runs/Zynq_Design_rst_ps7_0_50M_0_synth_1
+# Command line: vivado -log Zynq_Design_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_Design_rst_ps7_0_50M_0.tcl
+# Log file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab1/project_1/project_1.runs/Zynq_Design_rst_ps7_0_50M_0_synth_1/Zynq_Design_rst_ps7_0_50M_0.vds
+# Journal file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab1/project_1/project_1.runs/Zynq_Design_rst_ps7_0_50M_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source Zynq_Design_rst_ps7_0_50M_0.tcl -notrace

@@ -1,0 +1,149 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using ""
+   Compiling apatb_adders.cpp
+   Compiling (apcc) adders_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'puya' on host 'puyaa.puyaa' (Linux_x86_64 version 4.9.0-8-amd64) on Wed Jan 02 17:18:55 CET 2019
+INFO: [HLS 200-10] On os Debian GNU/Linux 9.6 (stretch)
+INFO: [HLS 200-10] In directory '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_puya/59911546445936022977
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) adders.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'puya' on host 'puyaa.puyaa' (Linux_x86_64 version 4.9.0-8-amd64) on Wed Jan 02 17:19:02 CET 2019
+INFO: [HLS 200-10] On os Debian GNU/Linux 9.6 (stretch)
+INFO: [HLS 200-10] In directory '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_puya/60491546445942807444
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+  10+20+30=60 
+  20+30+40=90 
+  30+40+50=120 
+  40+50+60=150 
+  50+60+70=180 
+----------Pass!------------
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_adders_top glbl -prj adders.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver --initfile /opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s adders -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/adders.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adders
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/adders.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_adders_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/adders_add_32ns_3bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adders_add_32ns_3bkb_AddSubnS_0
+INFO: [VRFC 10-311] analyzing module adders_add_32ns_3bkb_AddSubnS_0_comb_adder
+INFO: [VRFC 10-311] analyzing module adders_add_32ns_3bkb
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adders_add_32ns_3bkb_AddSubnS_0_...
+Compiling module xil_defaultlib.adders_add_32ns_3bkb_AddSubnS_0
+Compiling module xil_defaultlib.adders_add_32ns_3bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.adders
+Compiling module xil_defaultlib.apatb_adders_top
+Compiling module work.glbl
+Built simulation snapshot adders
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/xsim.dir/adders/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/xsim.dir/adders/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Jan  2 17:19:19 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Jan  2 17:19:19 2019...
+
+****** xsim v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/adders/xsim_script.tcl
+# xsim {adders} -autoloadwcfg -tclbatch {adders.tcl}
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source adders.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_return -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set in3_group [add_wave_group in3(wire) -into $cinputgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/in3 -into $in3_group -radix hex
+## set in2_group [add_wave_group in2(wire) -into $cinputgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/in2 -into $in2_group -radix hex
+## set in1_group [add_wave_group in1(wire) -into $cinputgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/in1 -into $in1_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_start -into $blocksiggroup
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_done -into $blocksiggroup
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_idle -into $blocksiggroup
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_adders_top/AESL_inst_adders/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_adders_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_adders_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_adders_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_adders_top/LENGTH_in1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_adders_top/LENGTH_in2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_adders_top/LENGTH_in3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_adders_top/LENGTH_ap_return -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_adders_top/ap_return -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_in3_group [add_wave_group in3(wire) -into $tbcinputgroup]
+## add_wave /apatb_adders_top/in3 -into $tb_in3_group -radix hex
+## set tb_in2_group [add_wave_group in2(wire) -into $tbcinputgroup]
+## add_wave /apatb_adders_top/in2 -into $tb_in2_group -radix hex
+## set tb_in1_group [add_wave_group in1(wire) -into $tbcinputgroup]
+## add_wave /apatb_adders_top/in1 -into $tb_in1_group -radix hex
+## save_wave_config adders.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 5 [0.00%] @ "103000"
+// RTL Simulation : 1 / 5 [100.00%] @ "108000"
+// RTL Simulation : 2 / 5 [100.00%] @ "112000"
+// RTL Simulation : 3 / 5 [100.00%] @ "116000"
+// RTL Simulation : 4 / 5 [100.00%] @ "120000"
+// RTL Simulation : 5 / 5 [100.00%] @ "124000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 127500 ps : File "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Interface_Synthesis/lab1/adders_prj/solution1/sim/verilog/adders.autotb.v" Line 383
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jan  2 17:19:36 2019...
+  10+20+30=60 
+  20+30+40=90 
+  30+40+50=120 
+  40+50+60=150 
+  50+60+70=180 
+----------Pass!------------
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

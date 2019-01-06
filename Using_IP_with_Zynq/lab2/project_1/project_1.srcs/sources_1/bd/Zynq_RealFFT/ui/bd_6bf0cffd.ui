@@ -1,0 +1,25 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port realfft_m_axis_dout -pg 1 -y 80 -defaultsOSRD
+preplace port realfft_s_axis_din -pg 1 -y 40 -defaultsOSRD
+preplace port aclk -pg 1 -y 100 -defaultsOSRD
+preplace port aresetn -pg 1 -y 120 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 350 -defaultsOSRD
+preplace inst hls_xfft2real_0 -pg 1 -lvl 3 -y 80 -defaultsOSRD
+preplace inst hls_real2xfft_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 4 -y 100 -defaultsOSRD
+preplace netloc hls_real2xfft_0_dout 1 1 1 80J
+preplace netloc axis_subset_converter_0_M_AXIS 1 4 1 1140
+preplace netloc realfft_s_axis_din_1 1 0 1 -220
+preplace netloc xfft_0_M_AXIS_DATA 1 2 1 470J
+preplace netloc xlconstant_0_dout 1 0 4 -200 10 NJ 10 480J 190 820
+preplace netloc aresetn_1 1 0 4 -220 250 80 230 490 180 830
+preplace netloc aclk_1 1 0 4 -210 0 90 0 500 170 820
+preplace netloc hls_xfft2real_0_dout 1 3 1 NJ
+levelinfo -pg 1 -240 -60 280 680 1020 1190 -top -10 -bot 460
+",
+}
+

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/RealFFT/ip/RealFFT_xfft_0_0/sim/RealFFT_xfft_0_0.vhd" \
+
+nosort

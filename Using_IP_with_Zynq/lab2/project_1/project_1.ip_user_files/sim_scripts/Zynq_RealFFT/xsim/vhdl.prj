@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/Zynq_RealFFT/ip/Zynq_RealFFT_xfft_0_0/sim/Zynq_RealFFT_xfft_0_0.vhd" \
+"../../../bd/Zynq_RealFFT/ip/Zynq_RealFFT_axi_dma_0_0/sim/Zynq_RealFFT_axi_dma_0_0.vhd" \
+"../../../bd/Zynq_RealFFT/ip/Zynq_RealFFT_rst_ps7_0_100M_1/sim/Zynq_RealFFT_rst_ps7_0_100M_1.vhd" \
+"../../../bd/Zynq_RealFFT/ip/Zynq_RealFFT_axi_smc_1/bd_0/ip/ip_1/sim/bd_851d_psr_aclk_0.vhd" \
+
+nosort

@@ -1,0 +1,68 @@
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running 'C:/Xilinx/Vivado_HLS/2014.1/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'duncanm' on host 'xsjduncanm30' (Windows NT_amd64 version 6.1) on Tue Apr 08 15:40:19 -0700 2014
+            in directory 'C:/Vivado_HLS_Tutorial/Design_Optimization/lab2'
+@I [HLS-10] Opening project 'C:/Vivado_HLS_Tutorial/Design_Optimization/lab2/matrixmul_prj'.
+@I [HLS-10] Opening solution 'C:/Vivado_HLS_Tutorial/Design_Optimization/lab2/matrixmul_prj/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 13.3333ns.
+@I [HLS-10] Setting target device to 'xc7k160tfbg484-1'
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado_HLS/2014.1/msys/bin/g++.exe"
+   Compiling apatb_matrixmul.cpp
+   Compiling matrixmul.cpp_pre.cpp.tb.cpp
+   Compiling matrixmul_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+@I [SIM-302] Generating test vectors ... 
+Test passes.
+@I [SIM-333] Generating C post check test bench ...
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-323] Starting verilog simulation. 
+@I [SIM-15] Starting XSIM ...
+
+C:\Vivado_HLS_Tutorial\Design_Optimization\lab2\matrixmul_prj\solution1\sim\verilog>call xelab xil_defaultlib.apatb_matrixmul_top -prj matrixmul.prj --lib "ieee_proposed=./ieee_proposed" -s matrixmul  
+Vivado Simulator 2014.1
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: c:/Xilinx/Vivado/2014.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_matrixmul_top -prj matrixmul.prj --lib ieee_proposed=./ieee_proposed -s matrixmul 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-165] Analyzing Verilog file "AESL_autofifo_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_a
+INFO: [VRFC 10-165] Analyzing Verilog file "AESL_autofifo_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_b
+INFO: [VRFC 10-165] Analyzing Verilog file "AESL_autofifo_res.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_res
+INFO: [VRFC 10-165] Analyzing Verilog file "matrixmul.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matrixmul_top
+INFO: [VRFC 10-165] Analyzing Verilog file "matrixmul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixmul
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.matrixmul
+Compiling module xil_defaultlib.AESL_autofifo_a
+Compiling module xil_defaultlib.AESL_autofifo_b
+Compiling module xil_defaultlib.AESL_autofifo_res
+Compiling module xil_defaultlib.apatb_matrixmul_top
+Built simulation snapshot matrixmul
+
+****** xsim v2014.1 (64-bit)
+  **** SW Build 878572 on Mon Mar 31 18:29:27 MDT 2014
+  **** IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/matrixmul/xsim_script.tcl
+# xsim {matrixmul} -maxdeltaid 10000 -tclbatch {matrixmul.tcl}
+Vivado Simulator 2014.1
+Time resolution is 1 ps
+source matrixmul.tcl
+## run all
+$finish called at time : 340417 ps : File "matrixmul.autotb.v" Line 331
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 08 15:40:38 2014...
+@I [SIM-316] Starting C post checking ...
+Test passes.
+@I [SIM-1000] *** C/RTL co-simulation finished: PASS ***
+@I [LIC-101] Checked in feature [HLS]

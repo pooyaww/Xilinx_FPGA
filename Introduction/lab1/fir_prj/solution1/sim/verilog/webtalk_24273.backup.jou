@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Jan  1 21:09:13 2019
+# Process ID: 24273
+# Current directory: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/webtalk.log
+# Journal file: /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace

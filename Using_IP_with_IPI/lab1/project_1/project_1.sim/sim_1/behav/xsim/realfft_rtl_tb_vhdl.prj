@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.ip_user_files/bd/RealFFT/ip/RealFFT_xfft_0_0/sim/RealFFT_xfft_0_0.vhd" \
+
+# Do not sort compile order
+nosort

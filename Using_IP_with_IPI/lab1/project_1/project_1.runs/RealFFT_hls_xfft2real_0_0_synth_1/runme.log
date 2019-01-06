@@ -1,0 +1,952 @@
+
+*** Running vivado
+    with args -log RealFFT_hls_xfft2real_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RealFFT_hls_xfft2real_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source RealFFT_hls_xfft2real_0_0.tcl -notrace
+Command: synth_design -top RealFFT_hls_xfft2real_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12446 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1257.031 ; gain = 81.996 ; free physical = 112 ; free virtual = 4268
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RealFFT_hls_xfft2real_0_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ip/RealFFT_hls_xfft2real_0_0/synth/RealFFT_hls_xfft2real_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_top' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_top.v:9]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real.v:12]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_desg8j' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j.v:11]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter BufferCount bound to: 2 - type: integer 
+	Parameter MemLatency bound to: 1 - type: integer 
+	Parameter IndexWidth bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_desg8j_memcore' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j_memcore.v:58]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_desg8j_memcore_ram' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j_memcore.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j_memcore.v:25]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_desg8j_memcore_ram' (1#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j_memcore.v:9]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_desg8j_memcore' (2#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j_memcore.v:58]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_desg8j' (3#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_desg8j.v:11]
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_buff' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_buff.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_buff.v:83]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_buff' (4#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_buff.v:10]
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_desc' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state14 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:100]
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_dbkb' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:43]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_dbkb_rom' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Loop_realfft_be_dbkb_rom.dat' is read successfully [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:24]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_dbkb_rom' (5#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:9]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_dbkb' (6#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:43]
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_dcud' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:43]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Loop_realfft_be_dcud_rom' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Loop_realfft_be_dcud_rom.dat' is read successfully [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:24]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_dcud_rom' (7#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:9]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_dcud' (8#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:43]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_muldEe' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_muldEe_DSP48_0' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:4]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_muldEe_DSP48_0' (9#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:4]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_muldEe' (10#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:30]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_maceOg' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:48]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter din2_WIDTH bound to: 31 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_maceOg_DSP48_1' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_maceOg_DSP48_1' (11#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_maceOg' (12#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:48]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_macfYi' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:48]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter din2_WIDTH bound to: 31 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_macfYi_DSP48_2' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_macfYi_DSP48_2' (13#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_macfYi' (14#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:48]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1168]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1170]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1198]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1200]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1202]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1208]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1218]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:1220]
+INFO: [Synth 8-256] done synthesizing module 'Loop_realfft_be_desc' (15#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real' (16#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real.v:12]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_m_axis_dout_if' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:11]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_m_axis_dout_reg_slice' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:168]
+	Parameter N bound to: 32 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_m_axis_dout_reg_slice' (17#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:168]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_m_axis_dout_fifo' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:93]
+	Parameter DATA_BITS bound to: 32 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_m_axis_dout_fifo' (18#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:93]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_m_axis_dout_if' (19#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:11]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_s_axis_din_if' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:11]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_s_axis_din_reg_slice' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:66]
+	Parameter N bound to: 33 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_s_axis_din_reg_slice' (20#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:66]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_s_axis_din_if' (21#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:11]
+INFO: [Synth 8-638] synthesizing module 'hls_xfft2real_ap_rst_if' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_ap_rst_if.v:10]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_ap_rst_if' (22#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_ap_rst_if.v:10]
+INFO: [Synth 8-256] done synthesizing module 'hls_xfft2real_top' (23#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_top.v:9]
+INFO: [Synth 8-256] done synthesizing module 'RealFFT_hls_xfft2real_0_0' (24#1) [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ip/RealFFT_hls_xfft2real_0_0/synth/RealFFT_hls_xfft2real_0_0.v:57]
+WARNING: [Synth 8-3331] design hls_xfft2real_macfYi_DSP48_2 has unconnected port rst
+WARNING: [Synth 8-3331] design hls_xfft2real_maceOg_DSP48_1 has unconnected port rst
+WARNING: [Synth 8-3331] design hls_xfft2real_muldEe_DSP48_0 has unconnected port rst
+WARNING: [Synth 8-3331] design Loop_realfft_be_dcud has unconnected port reset
+WARNING: [Synth 8-3331] design Loop_realfft_be_dbkb has unconnected port reset
+WARNING: [Synth 8-3331] design Loop_realfft_be_buff has unconnected port din_V_dout[32]
+WARNING: [Synth 8-3331] design hls_xfft2real_desg8j_memcore has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1300.562 ; gain = 125.527 ; free physical = 155 ; free virtual = 4264
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1300.562 ; gain = 125.527 ; free physical = 149 ; free virtual = 4260
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ip/RealFFT_hls_xfft2real_0_0/constraints/hls_xfft2real_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:09 . Memory (MB): peak = 1658.586 ; gain = 8.000 ; free physical = 574 ; free virtual = 3631
+Finished Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ip/RealFFT_hls_xfft2real_0_0/constraints/hls_xfft2real_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.runs/RealFFT_hls_xfft2real_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.runs/RealFFT_hls_xfft2real_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:02 . Memory (MB): peak = 1658.586 ; gain = 0.000 ; free physical = 483 ; free virtual = 3607
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:52 ; elapsed = 00:03:17 . Memory (MB): peak = 1658.586 ; gain = 483.551 ; free physical = 514 ; free virtual = 3705
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:03:17 . Memory (MB): peak = 1658.586 ; gain = 483.551 ; free physical = 513 ; free virtual = 3705
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.runs/RealFFT_hls_xfft2real_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:03:17 . Memory (MB): peak = 1658.586 ; gain = 483.551 ; free physical = 513 ; free virtual = 3707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond2224_i_fu_203_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element val_assign_reg_139_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_buff.v:126]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dbkb.v:33]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_dcud.v:33]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:19]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:20]
+WARNING: [Synth 8-6014] Unused sequential element m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:33]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:32]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:32]
+WARNING: [Synth 8-6014] Unused sequential element m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:33]
+WARNING: [Synth 8-6014] Unused sequential element a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+WARNING: [Synth 8-6014] Unused sequential element b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter1_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter1_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:623]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter2_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:631]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter3_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:638]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter4_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:645]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter5_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:652]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter6_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:659]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter7_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:666]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter8_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter8_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:673]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter9_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter9_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:680]
+INFO: [Synth 8-4471] merging register 'ap_phi_reg_pp0_iter10_tmp_M_real_V_reg_225_reg[15:0]' into 'ap_phi_reg_pp0_iter10_cdata_M_imag_V_reg_234_reg[15:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:616]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter10_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:616]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter1_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:623]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter2_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:631]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter3_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:638]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter4_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:645]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter5_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:652]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter6_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:659]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter7_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:666]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter8_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:673]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter9_tmp_M_real_V_reg_225_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:680]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_pp0_iter3_i1_0_i_reg_213_reg' and it is trimmed from '10' to '9' bits. [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:693]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_i_fu_243_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "icmp_fu_308_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_8_fu_255_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_659_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:624]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:144]
+WARNING: [Synth 8-6014] Unused sequential element index_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:143]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:118]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[1].mem_reg[1] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[2].mem_reg[2] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[3].mem_reg[3] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[4].mem_reg[4] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[5].mem_reg[5] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[6].mem_reg[6] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[7].mem_reg[7] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[8].mem_reg[8] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[9].mem_reg[9] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[10].mem_reg[10] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[11].mem_reg[11] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[12].mem_reg[12] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[13].mem_reg[13] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[14].mem_reg[14] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+WARNING: [Synth 8-6014] Unused sequential element gen_sr[15].mem_reg[15] was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:159]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:03:19 . Memory (MB): peak = 1658.586 ; gain = 483.551 ; free physical = 501 ; free virtual = 3698
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 5     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 4     
+	   2 Input      1 Bit       Adders := 8     
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 4     
+	               18 Bit    Registers := 2     
+	               17 Bit    Registers := 14    
+	               16 Bit    Registers := 70    
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 70    
++---RAMs : 
+	               4K Bit         RAMs := 8     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 36    
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 16    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 17    
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 65    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hls_xfft2real_desg8j_memcore_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+Module hls_xfft2real_desg8j 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+Module Loop_realfft_be_buff 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module Loop_realfft_be_dbkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module Loop_realfft_be_dcud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module hls_xfft2real_muldEe_DSP48_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module hls_xfft2real_maceOg_DSP48_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+Module hls_xfft2real_macfYi_DSP48_2 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+Module Loop_realfft_be_desc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 5     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 4     
+	               17 Bit    Registers := 14    
+	               16 Bit    Registers := 50    
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 12    
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module hls_xfft2real 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module hls_xfft2real_m_axis_dout_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module hls_xfft2real_m_axis_dout_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module hls_xfft2real_s_axis_din_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/b_reg_reg[17:0]' into 'hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/b_reg_reg[17:0]' [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'hls_xfft2real_s_axis_din_if_U/rs/data_p1_reg' and it is trimmed from '33' to '32' bits. [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:99]
+WARNING: [Synth 8-3936] Found unconnected internal register 'hls_xfft2real_s_axis_din_if_U/rs/data_p2_reg' and it is trimmed from '33' to '32' bits. [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_s_axis_din_if.v:120]
+INFO: [Synth 8-5546] ROM "hls_xfft2real_U/Loop_realfft_be_buff_U0/exitcond2224_i_fu_203_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hls_xfft2real_U/Loop_realfft_be_desc_U0/exitcond_i_fu_243_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_8_fu_255_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter3_i1_0_i_reg_213_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:693]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter3_i1_0_i_reg_213_reg_rep was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:693]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:33]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:33]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:33]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/m_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:33]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:20]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:20]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/b_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_2_i_reg_873_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:827]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/p_y_M_imag_V_read_a_reg_856_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:826]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp1_i_cast_i_reg_895_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:415]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_i_reg_861_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:828]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_3_i_cast_i_reg_900_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:432]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:19]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_muldEe.v:19]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_maceOg.v:32]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/a_reg_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_macfYi.v:32]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:415]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:415]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:415]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:415]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:432]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:432]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:432]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:432]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_buff_U0/val_assign_reg_139_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_buff.v:126]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_U/Loop_realfft_be_desc_U0/i_reg_659_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/Loop_realfft_be_desc.v:624]
+WARNING: [Synth 8-6014] Unused sequential element hls_xfft2real_m_axis_dout_if_U/dout_V_fifo/index_reg was removed.  [/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ipshared/a99d/hdl/verilog/hls_xfft2real_m_axis_dout_if.v:143]
+DSP Report: Generating DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/b_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/a_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg0 is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U6/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/b_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/a_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg0 is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_muldEe_U7/hls_xfft2real_muldEe_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg, operation Mode is: (C'-(A''*B'')')'.
+DSP Report: register B is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register B is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register A is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register A is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp1_i_cast_i_reg_895_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/m_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/p is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_maceOg_U8/hls_xfft2real_maceOg_DSP48_1_U/m is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_9_reg_915_reg.
+DSP Report: Generating DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg, operation Mode is: (C'+(A''*B'')')'.
+DSP Report: register B is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register B is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register A is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register A is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_3_i_cast_i_reg_900_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: register hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/m_reg_reg is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/p is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+DSP Report: operator hls_xfft2real_U/Loop_realfft_be_desc_U0/hls_xfft2real_macfYi_U9/hls_xfft2real_macfYi_DSP48_2_U/m is absorbed into DSP hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_7_reg_920_reg.
+WARNING: [Synth 8-3331] design hls_xfft2real_top has unconnected port s_axis_din_TLAST[0]
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[0]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[1]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[2]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[3]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[4]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[5]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[6]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[7]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[8]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[9]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[10]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[11]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[12]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[13]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[14]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_18_reg_811_reg[15]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/p_Val2_5_reg_806_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[0]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[1]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[2]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[3]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[4]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[5]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[6]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[7]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[8]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[9]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[10]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[11]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[12]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[13]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[14]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/r_V_2_reg_794_reg[16]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_25_reg_816_reg[0]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/tmp_22_reg_821_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter5_tmp_25_reg_816_reg[0]' (FDE) to 'inst/hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter5_tmp_22_reg_821_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_done_reg_reg) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter8_r_V_reg_787_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter9_r_V_reg_787_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter8_r_V_1_reg_799_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter9_r_V_1_reg_799_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:03:26 . Memory (MB): peak = 1658.586 ; gain = 483.551 ; free physical = 462 ; free virtual = 3668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+---------------------------------------------------------------------------------+---------------+----------------+
+|Module Name              | RTL Object                                                                      | Depth x Width | Implemented As | 
++-------------------------+---------------------------------------------------------------------------------+---------------+----------------+
+|Loop_realfft_be_dbkb_rom | q0_reg                                                                          | 512x16        | Block RAM      | 
+|Loop_realfft_be_dcud_rom | q0_reg                                                                          | 512x16        | Block RAM      | 
+|hls_xfft2real_top        | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter3_i1_0_i_reg_213_reg_rep | 512x16        | Block RAM      | 
+|hls_xfft2real_top        | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter3_i1_0_i_reg_213_reg     | 512x16        | Block RAM      | 
++-------------------------+---------------------------------------------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hls_xfft2real_muldEe_DSP48_0 | (A2*B2)'         | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|hls_xfft2real_muldEe_DSP48_0 | (A2*B2)'         | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|hls_xfft2real_top            | (C'-(A''*B'')')' | 25     | 18     | 31     | -      | 31     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|hls_xfft2real_top            | (C'+(A''*B'')')' | 25     | 18     | 31     | -      | 31     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
++-----------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:03:49 . Memory (MB): peak = 1672.586 ; gain = 497.551 ; free physical = 203 ; free virtual = 3444
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:03:50 . Memory (MB): peak = 1684.602 ; gain = 509.566 ; free physical = 192 ; free virtual = 3434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hls_xfft2real_desg8j_memcore_ram: | ram_reg    | 256 x 16(WRITE_FIRST)  | W | R | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter2_cdata_M_imag_V_reg_234_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter3_cdata_M_imag_V_reg_234_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter4_cdata_M_imag_V_reg_234_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter5_cdata_M_imag_V_reg_234_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter6_cdata_M_imag_V_reg_234_reg[0]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[15]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[14]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[13]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[12]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[11]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[10]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[9]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[8]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[7]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[6]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[5]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[4]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[3]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[2]) is unused and will be removed from module hls_xfft2real_top.
+WARNING: [Synth 8-3332] Sequential element (hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_phi_reg_pp0_iter7_cdata_M_imag_V_reg_234_reg[1]) is unused and will be removed from module hls_xfft2real_top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_1_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_1_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_1_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_0_M_1_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_1_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_1_U/gen_buffer[0].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_1_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/hls_xfft2real_U/descramble_buf_1_M_1_U/gen_buffer[1].hls_xfft2real_desg8j_memcore_U/hls_xfft2real_desg8j_memcore_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:03:51 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 173 ; free virtual = 3418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 170 ; free virtual = 3417
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 170 ; free virtual = 3417
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 169 ; free virtual = 3416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 169 ; free virtual = 3416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 169 ; free virtual = 3416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 169 ; free virtual = 3416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+-----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+-----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|hls_xfft2real_top | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter8_p_Val2_s_reg_775_reg[15] | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|hls_xfft2real_top | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter8_p_Val2_2_reg_781_reg[15] | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|hls_xfft2real_top | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter7_r_V_reg_787_reg[16]      | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|hls_xfft2real_top | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_reg_pp0_iter7_r_V_1_reg_799_reg[16]    | 3      | 17    | NO           | NO                 | YES               | 17     | 0       | 
+|hls_xfft2real_top | hls_xfft2real_U/Loop_realfft_be_desc_U0/ap_enable_reg_pp0_iter9_reg               | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------------+-----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name               | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | gen_sr[15].mem_reg[15] | 16     | 32         | 32     | 0       | 0      | 0      | 0      | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    76|
+|2     |DSP48E1    |     2|
+|3     |DSP48E1_1  |     2|
+|4     |LUT1       |   132|
+|5     |LUT2       |   243|
+|6     |LUT3       |   339|
+|7     |LUT4       |   179|
+|8     |LUT5       |   104|
+|9     |LUT6       |    49|
+|10    |RAMB18E1   |     8|
+|11    |RAMB18E1_3 |     1|
+|12    |RAMB18E1_4 |     1|
+|13    |SRL16E     |    99|
+|14    |FDCE       |     1|
+|15    |FDPE       |     5|
+|16    |FDRE       |   890|
+|17    |FDSE       |     8|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+------------------------------------+------+
+|      |Instance                                               |Module                              |Cells |
++------+-------------------------------------------------------+------------------------------------+------+
+|1     |top                                                    |                                    |  2139|
+|2     |  inst                                                 |hls_xfft2real_top                   |  2139|
+|3     |    hls_xfft2real_U                                    |hls_xfft2real                       |  1820|
+|4     |      Loop_realfft_be_buff_U0                          |Loop_realfft_be_buff                |    84|
+|5     |      Loop_realfft_be_desc_U0                          |Loop_realfft_be_desc                |  1430|
+|6     |        hls_xfft2real_muldEe_U6                        |hls_xfft2real_muldEe                |     1|
+|7     |          hls_xfft2real_muldEe_DSP48_0_U               |hls_xfft2real_muldEe_DSP48_0_18     |     1|
+|8     |        hls_xfft2real_muldEe_U7                        |hls_xfft2real_muldEe_17             |     2|
+|9     |          hls_xfft2real_muldEe_DSP48_0_U               |hls_xfft2real_muldEe_DSP48_0        |     2|
+|10    |      descramble_buf_0_M_1_U                           |hls_xfft2real_desg8j                |    76|
+|11    |        \gen_buffer[0].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_13     |    11|
+|12    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_16 |    11|
+|13    |        \gen_buffer[1].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_14     |    51|
+|14    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_15 |    51|
+|15    |      descramble_buf_0_M_U                             |hls_xfft2real_desg8j_0              |    74|
+|16    |        \gen_buffer[0].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_9      |    11|
+|17    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_12 |    11|
+|18    |        \gen_buffer[1].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_10     |    51|
+|19    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_11 |    51|
+|20    |      descramble_buf_1_M_1_U                           |hls_xfft2real_desg8j_1              |    75|
+|21    |        \gen_buffer[0].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_5      |    11|
+|22    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_8  |    11|
+|23    |        \gen_buffer[1].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_6      |    51|
+|24    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_7  |    51|
+|25    |      descramble_buf_1_M_U                             |hls_xfft2real_desg8j_2              |    77|
+|26    |        \gen_buffer[0].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore        |    11|
+|27    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram_4  |    11|
+|28    |        \gen_buffer[1].hls_xfft2real_desg8j_memcore_U  |hls_xfft2real_desg8j_memcore_3      |    51|
+|29    |          hls_xfft2real_desg8j_memcore_ram_U           |hls_xfft2real_desg8j_memcore_ram    |    51|
+|30    |    hls_xfft2real_m_axis_dout_if_U                     |hls_xfft2real_m_axis_dout_if        |   151|
+|31    |      dout_V_fifo                                      |hls_xfft2real_m_axis_dout_fifo      |    47|
+|32    |      rs                                               |hls_xfft2real_m_axis_dout_reg_slice |   104|
+|33    |    hls_xfft2real_s_axis_din_if_U                      |hls_xfft2real_s_axis_din_if         |   168|
+|34    |      rs                                               |hls_xfft2real_s_axis_din_reg_slice  |   168|
++------+-------------------------------------------------------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:03:53 . Memory (MB): peak = 1705.875 ; gain = 530.840 ; free physical = 169 ; free virtual = 3416
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 222 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:18 . Memory (MB): peak = 1705.875 ; gain = 172.816 ; free physical = 239 ; free virtual = 3487
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:03:54 . Memory (MB): peak = 1705.883 ; gain = 530.840 ; free physical = 239 ; free virtual = 3487
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+137 Infos, 188 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:04:00 . Memory (MB): peak = 1705.883 ; gain = 544.223 ; free physical = 365 ; free virtual = 3649
+INFO: [Common 17-1381] The checkpoint '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.runs/RealFFT_hls_xfft2real_0_0_synth_1/RealFFT_hls_xfft2real_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.srcs/sources_1/bd/RealFFT/ip/RealFFT_hls_xfft2real_0_0/RealFFT_hls_xfft2real_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 33 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Using_IP_with_IPI/lab1/project_1/project_1.runs/RealFFT_hls_xfft2real_0_0_synth_1/RealFFT_hls_xfft2real_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RealFFT_hls_xfft2real_0_0_utilization_synth.rpt -pb RealFFT_hls_xfft2real_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.61 . Memory (MB): peak = 1729.887 ; gain = 0.000 ; free physical = 298 ; free virtual = 3605
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  4 02:10:17 2019...

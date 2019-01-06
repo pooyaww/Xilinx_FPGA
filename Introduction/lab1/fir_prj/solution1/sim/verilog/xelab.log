@@ -1,0 +1,28 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_fir_top glbl -prj fir.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver --initfile /opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s fir 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/AESL_automem_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/fir_shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_shift_reg_ram
+INFO: [VRFC 10-311] analyzing module fir_shift_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/puya/Projects/FPGA/Xilinx/HLS/Vivado_HLS_Tutorial/Introduction/lab1/fir_prj/solution1/sim/verilog/fir.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fir_top
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fir_shift_reg_ram
+Compiling module xil_defaultlib.fir_shift_reg(DataWidth=32,Addre...
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.AESL_automem_c
+Compiling module xil_defaultlib.apatb_fir_top
+Compiling module work.glbl
+Built simulation snapshot fir

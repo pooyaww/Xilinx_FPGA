@@ -1,0 +1,7 @@
+Running: xsim.dir/hls_macc/xsimk -simmode gui -wdb hls_macc.wdb -simrunnum 0 -socket 49259
+Design successfully loaded
+Design Loading Memory Usage: 40156 KB (Peak: 40156 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 126340 KB (Peak: 179424 KB)
+Simulation CPU Usage: 630 ms

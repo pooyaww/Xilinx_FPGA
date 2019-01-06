@@ -1,0 +1,5 @@
+sv work "glbl.v"
+sv xil_defaultlib "adders.v"
+sv xil_defaultlib "adders.autotb.v"
+sv xil_defaultlib "adders_add_32ns_3bkb.v"
+
