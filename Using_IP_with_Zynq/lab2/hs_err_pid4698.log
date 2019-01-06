@@ -1,0 +1,20 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x923da9) [0x7fbf707c0da9]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xb6) [0x7fbf707c73f6]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x9209d3) [0x7fbf707bd9d3]
+/lib/x86_64-linux-gnu/libc.so.6(+0x33060) [0x7fbfae162060]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x5d849b) [0x7fbf7047549b]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x98f6e8) [0x7fbf7082c6e8]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x990d61) [0x7fbf7082dd61]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x947ac0) [0x7fbf707e4ac0]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0xac8997) [0x7fbf70965997]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0xad0475) [0x7fbf7096d475]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0xace84a) [0x7fbf7096b84a]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0xacebce) [0x7fbf7096bbce]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0xacf040) [0x7fbf7096c040]
+/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x926138) [0x7fbf707c3138]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x7494) [0x7fbfadf19494]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7fbfae217acf]
