@@ -20,7 +20,6 @@ features including:
 
 Included IP Cores:
   - Zynq-7000 Processing System (ZC706 design only)
-  - MIG AXI DDR3 Memory Controller (KC705 design only)
   - AXI Memory Mapped to PCI Express
   - AXI Central Direct Memory Access (CDMA)
   - AXI Interface Block RAM Controller
