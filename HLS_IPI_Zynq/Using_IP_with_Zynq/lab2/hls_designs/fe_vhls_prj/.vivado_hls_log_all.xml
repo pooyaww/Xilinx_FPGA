@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'out_start_offset' is power-on initialization." projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:31.938+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'din_mem_idx' is power-on initialization." projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:31.900+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sliding_win_1in2out&lt;ap_fixed,1024>' to 'sliding_win_1in2out_ap_fixed_1024_s'." projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:22.328+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'win_mem.V.1'." projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:20.889+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'win_mem.V.0'." projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:20.751+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls_window_fn::window_fn&lt;ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)0, 0>, 1024, (hls_window_fn::win_fn_t)2, 2>' to 'window_fn' (./window_fn.h:55:33)" projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:20.519+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'sliding_win_1in2out&lt;ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 1024>' to 'sliding_win_1in2out&lt;ap_fixed,1024>' (./sliding_win.h:69:29)" projectName="fe_vhls_prj" solutionName="IPXACTExport" date="2019-01-06T18:58:20.406+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
