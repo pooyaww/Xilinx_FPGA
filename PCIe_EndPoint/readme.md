@@ -59,3 +59,4 @@ To Generate the Subsystem use the following steps.
   5) Click "Generate Bitstream" in the flow navigator to run synthesis and
       implementation.
 
+Linux driver reference: https://www.xilinx.com/support/answers/65444.html
