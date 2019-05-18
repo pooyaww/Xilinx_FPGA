@@ -1,1 +1,1 @@
-Usefull for faster IO planning / Pin assignment
+Useful for faster IO planning / Pin assignment
