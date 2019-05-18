@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1815422 on Thu Mar 16 18:59:26 MDT 2017
+# IP Build 1815198 on Thu Mar 16 20:51:56 MDT 2017
+# Start of session at: Tue Mar 21 13:21:37 2017
+# Process ID: 15916
+# Current directory: C:/zcu106_ipi/zcu106_ipi.runs/impl_1
+# Command line: vivado.exe -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+# Log file: C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper.vdi
+# Journal file: C:/zcu106_ipi/zcu106_ipi.runs/impl_1\vivado.jou
+#-----------------------------------------------------------

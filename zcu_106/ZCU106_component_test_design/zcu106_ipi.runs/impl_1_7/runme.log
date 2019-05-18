@@ -1,0 +1,1021 @@
+
+*** Running vivado
+    with args -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1815422 on Thu Mar 16 18:59:26 MDT 2017
+  **** IP Build 1815198 on Thu Mar 16 20:51:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/jamesm/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/zcu106_ipi/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_HDMI_CTL_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_CTL_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_HDMI_TX_SRC_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_TX_SRC_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_PMOD_IN_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_PMOD_OUT_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_axi_bram_ctrl_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_axi_bram_ctrl_0_bram_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_clk_wiz_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_CLK_125_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_CLK_74_25_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC0_CLK0_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC0_CLK1_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC0_GBTCLK0_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC0_GBTCLK1_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC1_CLK0_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_FMC_HPC1_GBTCLK0_M2C_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_HDMI_RX_CLK_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_HDMI_SI5324_OUT_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_SFP_SI5328_OUT_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_USER_MGT_SI570_CLOCK1_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_USER_MGT_SI570_CLOCK2_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_USER_SMA_MGT_CLOCK_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_diff_freq_counter_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_diff_freq_counter_2_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_2_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_diff_freq_counter_3_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_3_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_diff_freq_counter_4_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_4_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_diff_freq_counter_5_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_5_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_1_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_1_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_2_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_2_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_3_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_3_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_5_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_5_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_6_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_6_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_7_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_7_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_8_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_8_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_gt_freq_counter_9_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_9_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_ddr4_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_dip_switches_8bits_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_iic0_pl_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic0_pl_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_iic1_pl_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic1_pl_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_led_8bits_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_microblaze_0_xlconcat_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_microblaze_0_xlconcat_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_push_buttons_5bits_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_system_management_wiz_0_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_uart2_pl_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_xbar_1' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_xbar_1/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_axi_smc_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_rst_ps8_0_99M_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_rst_ddr4_0_266M_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_auto_ds_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_ds_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_auto_pc_0' generated file not found 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_pc_0/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 816.898 ; gain = 381.980
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_CTL_0/system_HDMI_CTL_0.dcp' for cell 'system_i/HDMI_CTL'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_TX_SRC_0/system_HDMI_TX_SRC_0.dcp' for cell 'system_i/HDMI_TX_SRC'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/system_PMOD_IN_0.dcp' for cell 'system_i/PMOD_IN'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/system_PMOD_OUT_0.dcp' for cell 'system_i/PMOD_OUT'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0.dcp' for cell 'system_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0.dcp' for cell 'system_i/axi_bram_ctrl_0_bram'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/system_axi_smc_0.dcp' for cell 'system_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp' for cell 'system_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0.dcp' for cell 'system_i/ddr4_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/system_dip_switches_8bits_0.dcp' for cell 'system_i/dip_switches_8bits'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic0_pl_0/system_iic0_pl_0.dcp' for cell 'system_i/iic0_pl'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic1_pl_0/system_iic1_pl_0.dcp' for cell 'system_i/iic1_pl'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0.dcp' for cell 'system_i/ila_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/system_led_8bits_0.dcp' for cell 'system_i/led_8bits'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_microblaze_0_xlconcat_0/system_microblaze_0_xlconcat_0.dcp' for cell 'system_i/microblaze_0_xlconcat'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/system_push_buttons_5bits_0.dcp' for cell 'system_i/push_buttons_5bits'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/system_rst_ddr4_0_266M_0.dcp' for cell 'system_i/rst_ddr4_0_266M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0.dcp' for cell 'system_i/rst_ps8_0_99M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.dcp' for cell 'system_i/system_management_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/system_uart2_pl_0.dcp' for cell 'system_i/uart2_pl'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.dcp' for cell 'system_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/system_CLK_125_0.dcp' for cell 'system_i/clock_counter/CLK_125'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/system_CLK_74_25_0.dcp' for cell 'system_i/clock_counter/CLK_74_25'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/system_FMC_HPC0_CLK0_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC0_CLK0_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/system_FMC_HPC0_CLK1_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC0_CLK1_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/system_FMC_HPC0_GBTCLK0_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK0_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/system_FMC_HPC0_GBTCLK1_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK1_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/system_FMC_HPC1_CLK0_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC1_CLK0_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/system_FMC_HPC1_GBTCLK0_M2C_0.dcp' for cell 'system_i/clock_counter/FMC_HPC1_GBTCLK0_M2C'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/system_HDMI_RX_CLK_0.dcp' for cell 'system_i/clock_counter/HDMI_RX_CLK'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/system_HDMI_SI5324_OUT_0.dcp' for cell 'system_i/clock_counter/HDMI_SI5324_OUT'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/system_SFP_SI5328_OUT_0.dcp' for cell 'system_i/clock_counter/SFP_SI5328_OUT'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/system_USER_MGT_SI570_CLOCK1_0.dcp' for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/system_USER_MGT_SI570_CLOCK2_0.dcp' for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/system_USER_SMA_MGT_CLOCK_0.dcp' for cell 'system_i/clock_counter/USER_SMA_MGT_CLOCK'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_0_0/system_diff_freq_counter_0_0.dcp' for cell 'system_i/clock_counter/diff_freq_counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_2_0/system_diff_freq_counter_2_0.dcp' for cell 'system_i/clock_counter/diff_freq_counter_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_3_0/system_diff_freq_counter_3_0.dcp' for cell 'system_i/clock_counter/diff_freq_counter_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_4_0/system_diff_freq_counter_4_0.dcp' for cell 'system_i/clock_counter/diff_freq_counter_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_diff_freq_counter_5_0/system_diff_freq_counter_5_0.dcp' for cell 'system_i/clock_counter/diff_freq_counter_5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_0_0/system_gt_freq_counter_0_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_1_0/system_gt_freq_counter_1_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_2_0/system_gt_freq_counter_2_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_3_0/system_gt_freq_counter_3_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_5_0/system_gt_freq_counter_5_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_6_0/system_gt_freq_counter_6_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_7_0/system_gt_freq_counter_7_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_7'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_8_0/system_gt_freq_counter_8_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_8'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_gt_freq_counter_9_0/system_gt_freq_counter_9_0.dcp' for cell 'system_i/clock_counter/gt_freq_counter_9'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.dcp' for cell 'system_i/clock_counter/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp' for cell 'system_i/ps8_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0.dcp' for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp' for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 1759 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-i-es2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_i/clk_wiz_0/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/clk_wiz_0/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/zcu106_ipi/zcu106_ipi.runs/impl_1/.Xil/Vivado-18120-XCOJAMESM22/dcp19/system_clk_wiz_0_0.edf:293]
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_CTL_0/system_HDMI_CTL_0_board.xdc] for cell 'system_i/HDMI_CTL/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_CTL_0/system_HDMI_CTL_0_board.xdc] for cell 'system_i/HDMI_CTL/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_TX_SRC_0/system_HDMI_TX_SRC_0_board.xdc] for cell 'system_i/HDMI_TX_SRC/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_TX_SRC_0/system_HDMI_TX_SRC_0_board.xdc] for cell 'system_i/HDMI_TX_SRC/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/system_PMOD_IN_0_board.xdc] for cell 'system_i/PMOD_IN/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/system_PMOD_IN_0_board.xdc] for cell 'system_i/PMOD_IN/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/system_PMOD_IN_0.xdc] for cell 'system_i/PMOD_IN/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_IN_0/system_PMOD_IN_0.xdc] for cell 'system_i/PMOD_IN/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/system_PMOD_OUT_0_board.xdc] for cell 'system_i/PMOD_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/system_PMOD_OUT_0_board.xdc] for cell 'system_i/PMOD_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/system_PMOD_OUT_0.xdc] for cell 'system_i/PMOD_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_PMOD_OUT_0/system_PMOD_OUT_0.xdc] for cell 'system_i/PMOD_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2794.730 ; gain = 676.469
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/system_CLK_125_0_board.xdc] for cell 'system_i/clock_counter/CLK_125/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/system_CLK_125_0_board.xdc] for cell 'system_i/clock_counter/CLK_125/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/system_CLK_125_0.xdc] for cell 'system_i/clock_counter/CLK_125/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_125_0/system_CLK_125_0.xdc] for cell 'system_i/clock_counter/CLK_125/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/system_CLK_74_25_0_board.xdc] for cell 'system_i/clock_counter/CLK_74_25/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/system_CLK_74_25_0_board.xdc] for cell 'system_i/clock_counter/CLK_74_25/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/system_CLK_74_25_0.xdc] for cell 'system_i/clock_counter/CLK_74_25/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_CLK_74_25_0/system_CLK_74_25_0.xdc] for cell 'system_i/clock_counter/CLK_74_25/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/system_FMC_HPC0_CLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/system_FMC_HPC0_CLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/system_FMC_HPC0_CLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK0_M2C_0/system_FMC_HPC0_CLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/system_FMC_HPC0_CLK1_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK1_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/system_FMC_HPC0_CLK1_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK1_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/system_FMC_HPC0_CLK1_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK1_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_CLK1_M2C_0/system_FMC_HPC0_CLK1_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_CLK1_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/system_FMC_HPC0_GBTCLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/system_FMC_HPC0_GBTCLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/system_FMC_HPC0_GBTCLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK0_M2C_0/system_FMC_HPC0_GBTCLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/system_FMC_HPC0_GBTCLK1_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK1_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/system_FMC_HPC0_GBTCLK1_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK1_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/system_FMC_HPC0_GBTCLK1_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK1_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC0_GBTCLK1_M2C_0/system_FMC_HPC0_GBTCLK1_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC0_GBTCLK1_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/system_FMC_HPC1_CLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC1_CLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/system_FMC_HPC1_CLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC1_CLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/system_FMC_HPC1_CLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC1_CLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_CLK0_M2C_0/system_FMC_HPC1_CLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC1_CLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/system_FMC_HPC1_GBTCLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC1_GBTCLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/system_FMC_HPC1_GBTCLK0_M2C_0_board.xdc] for cell 'system_i/clock_counter/FMC_HPC1_GBTCLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/system_FMC_HPC1_GBTCLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC1_GBTCLK0_M2C/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_FMC_HPC1_GBTCLK0_M2C_0/system_FMC_HPC1_GBTCLK0_M2C_0.xdc] for cell 'system_i/clock_counter/FMC_HPC1_GBTCLK0_M2C/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/system_HDMI_RX_CLK_0_board.xdc] for cell 'system_i/clock_counter/HDMI_RX_CLK/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/system_HDMI_RX_CLK_0_board.xdc] for cell 'system_i/clock_counter/HDMI_RX_CLK/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/system_HDMI_RX_CLK_0.xdc] for cell 'system_i/clock_counter/HDMI_RX_CLK/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_RX_CLK_0/system_HDMI_RX_CLK_0.xdc] for cell 'system_i/clock_counter/HDMI_RX_CLK/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/system_HDMI_SI5324_OUT_0_board.xdc] for cell 'system_i/clock_counter/HDMI_SI5324_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/system_HDMI_SI5324_OUT_0_board.xdc] for cell 'system_i/clock_counter/HDMI_SI5324_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/system_HDMI_SI5324_OUT_0.xdc] for cell 'system_i/clock_counter/HDMI_SI5324_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_HDMI_SI5324_OUT_0/system_HDMI_SI5324_OUT_0.xdc] for cell 'system_i/clock_counter/HDMI_SI5324_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/system_SFP_SI5328_OUT_0_board.xdc] for cell 'system_i/clock_counter/SFP_SI5328_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/system_SFP_SI5328_OUT_0_board.xdc] for cell 'system_i/clock_counter/SFP_SI5328_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/system_SFP_SI5328_OUT_0.xdc] for cell 'system_i/clock_counter/SFP_SI5328_OUT/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_SFP_SI5328_OUT_0/system_SFP_SI5328_OUT_0.xdc] for cell 'system_i/clock_counter/SFP_SI5328_OUT/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/system_USER_MGT_SI570_CLOCK1_0_board.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK1/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/system_USER_MGT_SI570_CLOCK1_0_board.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK1/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/system_USER_MGT_SI570_CLOCK1_0.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK1/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK1_0/system_USER_MGT_SI570_CLOCK1_0.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK1/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/system_USER_MGT_SI570_CLOCK2_0_board.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK2/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/system_USER_MGT_SI570_CLOCK2_0_board.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK2/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/system_USER_MGT_SI570_CLOCK2_0.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK2/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_MGT_SI570_CLOCK2_0/system_USER_MGT_SI570_CLOCK2_0.xdc] for cell 'system_i/clock_counter/USER_MGT_SI570_CLOCK2/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/system_USER_SMA_MGT_CLOCK_0_board.xdc] for cell 'system_i/clock_counter/USER_SMA_MGT_CLOCK/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/system_USER_SMA_MGT_CLOCK_0_board.xdc] for cell 'system_i/clock_counter/USER_SMA_MGT_CLOCK/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/system_USER_SMA_MGT_CLOCK_0.xdc] for cell 'system_i/clock_counter/USER_SMA_MGT_CLOCK/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_USER_SMA_MGT_CLOCK_0/system_USER_SMA_MGT_CLOCK_0.xdc] for cell 'system_i/clock_counter/USER_SMA_MGT_CLOCK/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_2/bd_031c_ilmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_2/bd_031c_ilmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_3/bd_031c_dlmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_3/bd_031c_dlmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_10/bd_031c_iomodule_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_10/bd_031c_iomodule_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/ip_0/system_ddr4_0_0_microblaze_mcs_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/ip_0/system_ddr4_0_0_microblaze_mcs_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0_board.xdc] for cell 'system_i/ddr4_0/inst'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0_board.xdc:227]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0_board.xdc] for cell 'system_i/ddr4_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc] for cell 'system_i/ddr4_0/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc] for cell 'system_i/ddr4_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/system_dip_switches_8bits_0_board.xdc] for cell 'system_i/dip_switches_8bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/system_dip_switches_8bits_0_board.xdc] for cell 'system_i/dip_switches_8bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/system_dip_switches_8bits_0.xdc] for cell 'system_i/dip_switches_8bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_dip_switches_8bits_0/system_dip_switches_8bits_0.xdc] for cell 'system_i/dip_switches_8bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic0_pl_0/system_iic0_pl_0_board.xdc] for cell 'system_i/iic0_pl/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic0_pl_0/system_iic0_pl_0_board.xdc] for cell 'system_i/iic0_pl/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic1_pl_0/system_iic1_pl_0_board.xdc] for cell 'system_i/iic1_pl/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_iic1_pl_0/system_iic1_pl_0_board.xdc] for cell 'system_i/iic1_pl/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/ila_0/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/ila_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/system_led_8bits_0_board.xdc] for cell 'system_i/led_8bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/system_led_8bits_0_board.xdc] for cell 'system_i/led_8bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/system_led_8bits_0.xdc] for cell 'system_i/led_8bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_led_8bits_0/system_led_8bits_0.xdc] for cell 'system_i/led_8bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/system_push_buttons_5bits_0_board.xdc] for cell 'system_i/push_buttons_5bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/system_push_buttons_5bits_0_board.xdc] for cell 'system_i/push_buttons_5bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/system_push_buttons_5bits_0.xdc] for cell 'system_i/push_buttons_5bits/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_push_buttons_5bits_0/system_push_buttons_5bits_0.xdc] for cell 'system_i/push_buttons_5bits/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc] for cell 'system_i/system_management_wiz_0/inst'
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port i2c_sclk can not be placed on PACKAGE_PIN AC18 because the PACKAGE_PIN is occupied by port ddr4_rtl_dq[34] [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc:55]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Cannot set PACKAGE_PIN property of ports,  port i2c_sda can not be placed on PACKAGE_PIN AA19 because the PACKAGE_PIN is occupied by port ddr4_rtl_dq[38] [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc:56]
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc] for cell 'system_i/system_management_wiz_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/system_uart2_pl_0_board.xdc] for cell 'system_i/uart2_pl/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/system_uart2_pl_0_board.xdc] for cell 'system_i/uart2_pl/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/system_uart2_pl_0.xdc] for cell 'system_i/uart2_pl/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_uart2_pl_0/system_uart2_pl_0.xdc] for cell 'system_i/uart2_pl/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr0_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr0_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr0_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr0_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_psr_aclk_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_psr_aclk_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_psr_aclk_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_psr_aclk_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_psr_aclk1_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_psr_aclk1_0_board.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_psr_aclk1_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_psr_aclk1_0.xdc] for cell 'system_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_board.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_board.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/system_rst_ddr4_0_266M_0_board.xdc] for cell 'system_i/rst_ddr4_0_266M/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/system_rst_ddr4_0_266M_0_board.xdc] for cell 'system_i/rst_ddr4_0_266M/U0'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/system_rst_ddr4_0_266M_0.xdc] for cell 'system_i/rst_ddr4_0_266M/U0'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_rst_ddr4_0_266M_0/system_rst_ddr4_0_266M_0.xdc] for cell 'system_i/rst_ddr4_0_266M/U0'
+Parsing XDC File [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sdi_iic_scl_io'. [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sdi_iic_scl_io'. [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/zcu106_ipi/zcu106_ipi.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/system_axi_smc_0.dcp'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/bd_44e3_m01arn_0/bd_44e3_m01arn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/bd_44e3_m01arn_0/bd_44e3_m01arn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/bd_44e3_m01rn_0/bd_44e3_m01rn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/bd_44e3_m01rn_0/bd_44e3_m01rn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/bd_44e3_m01awn_0/bd_44e3_m01awn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/bd_44e3_m01awn_0/bd_44e3_m01awn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/bd_44e3_m01wn_0/bd_44e3_m01wn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/bd_44e3_m01wn_0/bd_44e3_m01wn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/bd_44e3_m01bn_0/bd_44e3_m01bn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/bd_44e3_m01bn_0/bd_44e3_m01bn_0_clocks.xdc] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst'
+Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_0/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_1/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_2/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_3/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_5/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_6/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_7/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_8/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_9/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_0/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_1/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_2/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_3/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_5/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_6/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_7/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_8/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_9/inst/BUFG_GT_SYNC
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell system_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Generating merged BMM file for the design top 'system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1448 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 680 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 22 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 6 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 10 instances
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT, OBUFT): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 63 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF, OBUF): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 358 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 5 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 16 instances
+
+link_design: Time (s): cpu = 00:03:16 ; elapsed = 00:03:28 . Memory (MB): peak = 2814.871 ; gain = 1997.973
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'. Explanation: The license server does not support feature zynquplus. The feature has expired (on the server), or has not yet started, or the version is greater than the highest supported version.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-es2'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev-es2'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2814.871 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize MIG Cores
+get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2814.871 ; gain = 0.000
+read_xdc: Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2814.871 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.538 . Memory (MB): peak = 2905.848 ; gain = 0.000
+Phase 1 Generate And Synthesize MIG Cores | Checksum: 106479418
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:03:23 . Memory (MB): peak = 2905.848 ; gain = 90.977
+
+Phase 2 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "df61d9e253d202d2".
+get_clocks: Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2905.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.649 . Memory (MB): peak = 2905.848 ; gain = 0.000
+Phase 2 Generate And Synthesize Debug Cores | Checksum: 1873d7b4a
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:05:28 . Memory (MB): peak = 2905.848 ; gain = 90.977
+
+Phase 3 Retarget
+INFO: [Opt 31-138] Pushed 79 inverter(s) to 2620 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: dc0af6e2
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:05:46 . Memory (MB): peak = 2905.848 ; gain = 90.977
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1035 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 11 load pin(s).
+Phase 4 Constant propagation | Checksum: ecd50a06
+
+Time (s): cpu = 00:02:03 ; elapsed = 00:05:58 . Memory (MB): peak = 2905.848 ; gain = 90.977
+INFO: [Opt 31-389] Phase Constant propagation created 408 cells and removed 3213 cells
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 1765f7085
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:06:22 . Memory (MB): peak = 2905.848 ; gain = 90.977
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3544 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: f7f936b4
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:06:39 . Memory (MB): peak = 2905.848 ; gain = 90.977
+INFO: [Opt 31-389] Phase BUFG optimization created 1 cells and removed 2 cells
+
+Phase 7 Shift Register Optimization
+Phase 7 Shift Register Optimization | Checksum: f7f936b4
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:06:40 . Memory (MB): peak = 2905.848 ; gain = 90.977
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.382 . Memory (MB): peak = 2905.848 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: f7f936b4
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:06:41 . Memory (MB): peak = 2905.848 ; gain = 90.977
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for xiphy_riu_or
+INFO: [Power 33-23] Power model is not available for genVref.u_hpio_vref
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 10 BRAM(s) out of a total of 36 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 10 newly gated: 0 Total Ports: 72
+Ending PowerOpt Patch Enables Task | Checksum: 9078fc9d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.455 . Memory (MB): peak = 3456.836 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 9078fc9d
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:01:04 . Memory (MB): peak = 3456.836 ; gain = 550.988
+INFO: [Common 17-83] Releasing license: Implementation
+121 Infos, 59 Warnings, 5 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:04:35 ; elapsed = 00:08:25 . Memory (MB): peak = 3456.836 ; gain = 641.965
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.484 . Memory (MB): peak = 3456.836 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3456.836 ; gain = 0.000
+Command: report_drc -file system_wrapper_drc_opted.rpt
+INFO: [Coretcl 2-168] The results of DRC are in file C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3456.836 ; gain = 0.000
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'. Explanation: The license server does not support feature zynquplus. The feature has expired (on the server), or has not yet started, or the version is greater than the highest supported version.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-es2'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev-es2'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.366 . Memory (MB): peak = 3456.836 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 48119247
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.442 . Memory (MB): peak = 3456.836 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_0/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_1/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_2/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_3/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_5/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_6/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_7/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_8/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-264] Inserting BUFG_GT_SYNC for bufg: system_i/clock_counter/gt_freq_counter_9/inst/BUFG_GT_inst_DIFF_MGTE4_CLK1
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_0/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_1/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_2/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_3/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_5/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_6/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_7/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_8/inst/BUFG_GT_SYNC
+INFO: [Opt 31-263] Collapsing BUFG_gt_syncs for bufg_gt_sync: system_i/clock_counter/gt_freq_counter_9/inst/BUFG_GT_SYNC
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.354 . Memory (MB): peak = 3456.836 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9e3f6204
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:02:20 . Memory (MB): peak = 3767.859 ; gain = 311.023
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1186f40bb
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:03:08 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1186f40bb
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:03:09 . Memory (MB): peak = 3851.836 ; gain = 395.000
+Phase 1 Placer Initialization | Checksum: 1186f40bb
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:03:10 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 152ce12a8
+
+Time (s): cpu = 00:05:36 ; elapsed = 00:05:47 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 152ce12a8
+
+Time (s): cpu = 00:05:37 ; elapsed = 00:05:48 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: fede40ec
+
+Time (s): cpu = 00:06:03 ; elapsed = 00:06:14 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 11f23ab89
+
+Time (s): cpu = 00:06:05 ; elapsed = 00:06:16 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1641b7d0c
+
+Time (s): cpu = 00:06:05 ; elapsed = 00:06:17 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.5 IO Cut Optimizer
+Phase 3.5 IO Cut Optimizer | Checksum: 18bdb0260
+
+Time (s): cpu = 00:06:11 ; elapsed = 00:06:22 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.6 Timing Path Optimizer
+Phase 3.6 Timing Path Optimizer | Checksum: 18bdb0260
+
+Time (s): cpu = 00:06:11 ; elapsed = 00:06:22 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.7 Small Shape Clustering
+Phase 3.7 Small Shape Clustering | Checksum: 127966ea3
+
+Time (s): cpu = 00:06:28 ; elapsed = 00:06:39 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.8 DP Optimization
+Phase 3.8 DP Optimization | Checksum: bb94be86
+
+Time (s): cpu = 00:07:01 ; elapsed = 00:07:14 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.9 Flow Legalize Slice Clusters
+Phase 3.9 Flow Legalize Slice Clusters | Checksum: a3ccb4ca
+
+Time (s): cpu = 00:07:02 ; elapsed = 00:07:15 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.10 Slice Area Swap
+Phase 3.10 Slice Area Swap | Checksum: c78313da
+
+Time (s): cpu = 00:07:11 ; elapsed = 00:07:24 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.11 Commit Slice Clusters
+Phase 3.11 Commit Slice Clusters | Checksum: 1ca5ac269
+
+Time (s): cpu = 00:07:50 ; elapsed = 00:08:03 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.12 Re-assign LUT pins
+Phase 3.12 Re-assign LUT pins | Checksum: 1bcd48537
+
+Time (s): cpu = 00:07:57 ; elapsed = 00:08:10 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 3.13 Pipeline Register Optimization
+Phase 3.13 Pipeline Register Optimization | Checksum: 1bcd48537
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:08:11 . Memory (MB): peak = 3851.836 ; gain = 395.000
+Phase 3 Detail Placement | Checksum: 1bcd48537
+
+Time (s): cpu = 00:07:59 ; elapsed = 00:08:12 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1302b975a
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 1 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1302b975a
+
+Time (s): cpu = 00:09:24 ; elapsed = 00:09:38 . Memory (MB): peak = 3851.836 ; gain = 395.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.901. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 19ce2e8dc
+
+Time (s): cpu = 00:09:26 ; elapsed = 00:09:39 . Memory (MB): peak = 3851.836 ; gain = 395.000
+Phase 4.1 Post Commit Optimization | Checksum: 19ce2e8dc
+
+Time (s): cpu = 00:09:27 ; elapsed = 00:09:40 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 19ce2e8dc
+
+Time (s): cpu = 00:09:28 ; elapsed = 00:09:42 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 27b87cf46
+
+Time (s): cpu = 00:09:31 ; elapsed = 00:09:44 . Memory (MB): peak = 3851.836 ; gain = 395.000
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 29da4f62a
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:09:45 . Memory (MB): peak = 3851.836 ; gain = 395.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 29da4f62a
+
+Time (s): cpu = 00:09:33 ; elapsed = 00:09:46 . Memory (MB): peak = 3851.836 ; gain = 395.000
+Ending Placer Task | Checksum: 204324c60
+
+Time (s): cpu = 00:09:33 ; elapsed = 00:09:46 . Memory (MB): peak = 3851.836 ; gain = 395.000
+INFO: [Common 17-83] Releasing license: Implementation
+156 Infos, 60 Warnings, 5 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:10:02 ; elapsed = 00:10:20 . Memory (MB): peak = 3851.836 ; gain = 395.000
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3851.836 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 3851.836 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.296 . Memory (MB): peak = 3851.836 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.836 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.552 . Memory (MB): peak = 3851.836 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'. Explanation: The license server does not support feature zynquplus. The feature has expired (on the server), or has not yet started, or the version is greater than the highest supported version.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-es2'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev-es2'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+Checksum: PlaceDB: 68432a4b ConstDB: 0 ShapeSum: bd4a3bab RouteDB: dea4e66a
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 136b24a7f
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:47 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1bb7665a7
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:02:51 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1bb7665a7
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:02:51 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1bb7665a7
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:02:52 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 2270a22c5
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:03:01 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 1c758867a
+
+Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 4190.773 ; gain = 338.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.978  | TNS=0.000  | WHS=-0.058 | THS=-46.442|
+
+
+Phase 2.6 Update Timing for Bus Skew
+
+Phase 2.6.1 Update Timing
+Phase 2.6.1 Update Timing | Checksum: 2acb523ef
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:05:59 . Memory (MB): peak = 4190.773 ; gain = 338.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.978  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.6 Update Timing for Bus Skew | Checksum: 2911dd520
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:06:00 . Memory (MB): peak = 4190.773 ; gain = 338.938
+Phase 2 Router Initialization | Checksum: 1dfa1c2aa
+
+Time (s): cpu = 00:05:57 ; elapsed = 00:06:00 . Memory (MB): peak = 4190.773 ; gain = 338.938
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 232a633f9
+
+Time (s): cpu = 00:08:05 ; elapsed = 00:08:09 . Memory (MB): peak = 4198.340 ; gain = 346.504
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 18034
+ Number of Nodes with overlaps = 1346
+ Number of Nodes with overlaps = 128
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.714  | TNS=0.000  | WHS=-0.023 | THS=-0.069 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 221acd96f
+
+Time (s): cpu = 00:16:11 ; elapsed = 00:16:21 . Memory (MB): peak = 4232.633 ; gain = 380.797
+Phase 4 Rip-up And Reroute | Checksum: 221acd96f
+
+Time (s): cpu = 00:16:12 ; elapsed = 00:16:22 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1cdb17195
+
+Time (s): cpu = 00:16:44 ; elapsed = 00:16:55 . Memory (MB): peak = 4232.633 ; gain = 380.797
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.714  | TNS=0.000  | WHS=0.030  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 1cc864f46
+
+Time (s): cpu = 00:16:45 ; elapsed = 00:16:56 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1cc864f46
+
+Time (s): cpu = 00:16:45 ; elapsed = 00:16:56 . Memory (MB): peak = 4232.633 ; gain = 380.797
+Phase 5 Delay and Skew Optimization | Checksum: 1cc864f46
+
+Time (s): cpu = 00:16:46 ; elapsed = 00:16:56 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 2a9af51cc
+
+Time (s): cpu = 00:17:12 ; elapsed = 00:17:22 . Memory (MB): peak = 4232.633 ; gain = 380.797
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.714  | TNS=0.000  | WHS=0.030  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 29a88aed3
+
+Time (s): cpu = 00:17:12 ; elapsed = 00:17:23 . Memory (MB): peak = 4232.633 ; gain = 380.797
+Phase 6 Post Hold Fix | Checksum: 29a88aed3
+
+Time (s): cpu = 00:17:13 ; elapsed = 00:17:23 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.69132 %
+  Global Horizontal Routing Utilization  = 4.88657 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 2aa46fd28
+
+Time (s): cpu = 00:17:14 ; elapsed = 00:17:25 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 2aa46fd28
+
+Time (s): cpu = 00:17:15 ; elapsed = 00:17:26 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2aa46fd28
+
+Time (s): cpu = 00:17:24 ; elapsed = 00:17:35 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.714  | TNS=0.000  | WHS=0.030  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 2aa46fd28
+
+Time (s): cpu = 00:17:25 ; elapsed = 00:17:36 . Memory (MB): peak = 4232.633 ; gain = 380.797
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:17:25 ; elapsed = 00:17:36 . Memory (MB): peak = 4232.633 ; gain = 380.797
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+170 Infos, 61 Warnings, 5 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:17:48 ; elapsed = 00:18:04 . Memory (MB): peak = 4232.633 ; gain = 380.797
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4232.633 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 4232.633 ; gain = 0.000
+Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+INFO: [Coretcl 2-168] The results of DRC are in file C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 4232.633 ; gain = 0.000
+Command: report_methodology -file system_wrapper_methodology_drc_routed.rpt -rpx system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#1 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#1]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/U_CDONE/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '107' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 80)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#2 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#2]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '108' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 81)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#3 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#3]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '109' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 82)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#4 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#4]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/U_CMPRESET/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '101' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 74)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#5 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#5]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/U_CMPRESET/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '102' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 75)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#6 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#6]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/U_CMPRESET/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '94' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 63)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#7 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#7]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/U_SCE/I_YESLUT6.U_SRLC16E/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '103' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 76)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#8 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#8]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/U_SCE/I_YESLUT6.U_SRLC16E/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '104' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 77)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#9 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#9]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/U_SCMPCE/I_YESLUT6.U_SRL32/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '91' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 60)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#10 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#10]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/U_SCRST/I_YESLUT6.U_SRL32_*/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '105' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 78)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#11 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#11]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '93' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 62)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#12 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#12]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/u_srl_drive/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '92' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 61)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#13 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#13]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/U_WCE/I_YESLUT6.U_SRLC16E/CLK*" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '106' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 79)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#14 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#14]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/U_WHCMPCE/I_YESLUT6.U_SRL32/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '99' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 72)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#15 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#15]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/U_WLCMPCE/I_YESLUT6.U_SRL32/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '100' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 73)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#16 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#16]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '96' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 69)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#17 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#17]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/u_srl_drive/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '98' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 71)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#18 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#18]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '95' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 68)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#19 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#19]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/u_srl_drive/CLK*"}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '97' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 70)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#20 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#20]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/ADV_TRIG.u_adv_trig/FLAG*/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '118' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 95)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#21 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#21]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/ADV_TRIG.u_adv_trig/SEQUENCER_STATE_O*/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '117' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 94)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#22 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#22]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/COUNTER.u_count/G_COUNTER[*].U_COUNTER/counter_load_i*/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '116' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 93)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#23 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#23]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/U_SCRST/I_YESLUT6.U_SRL32*/CLK" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '115' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 92)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#24 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#24]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '110' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 87)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#25 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#25]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '111' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 88)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#26 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#26]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '112' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 89)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#27 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#27]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '113' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 90)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#28 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#28]'. Full text: 'The option '-from : [get_pins -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg/C" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '114' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 91)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#29 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#29]'. Full text: 'The option '-from : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '85' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 41)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#30 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#30]'. Full text: 'The option '-from : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/u_srl_drive/CLK}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '84' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 40)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#31 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#31]'. Full text: 'The option '-to : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/COUNTER.u_count/G_COUNTER[*].U_COUNTER/counter_reg[*]/D" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '116' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 93)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#32 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#32]'. Full text: 'The option '-to : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_88f/I_EN_STAT_EQ1.U_STAT/xsdb_reg*/D" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '117' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 94)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#33 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#33]'. Full text: 'The option '-to : [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_892/I_EN_STAT_EQ1.U_STAT/xsdb_reg*/D" }]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '118' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 95)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#34 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#34]'. Full text: 'The option '-to : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '84' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 40)'
+INFO: [DRC 23-114] NEW DRC VIOLATION: XDCB-5#35 is a violation of a new DRC check. When fully enabled, it will have a severity of 'Warning'. If this violation is correct, please modify the design accordingly. If not, please file a CR with this design as a test case so the DRC team can investigate. Use this command to get full information on this violation: 'report_property [get_drc_violations XDCB-5#35]'. Full text: 'The option '-to : [get_pins -hierarchical -filter {NAME =~ *allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '85' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc (Line: 41)'
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/zcu106_ipi/zcu106_ipi.runs/impl_1/system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:02:40 ; elapsed = 00:02:42 . Memory (MB): peak = 4551.605 ; gain = 318.973
+Command: report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+211 Infos, 62 Warnings, 5 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:25 ; elapsed = 00:01:05 . Memory (MB): peak = 4827.715 ; gain = 276.109
+report_clock_utilization: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 4827.715 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 4827.715 ; gain = 0.000
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+WARNING: [Memdata 28-169] Found XPM memory block system_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
+Command: write_bitstream -force system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xczu7ev-ffvc1156-es2'. Explanation: The license server does not support feature zynquplus. The feature has expired (on the server), or has not yet started, or the version is greater than the highest supported version.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev-es2'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev-es2'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+WARNING: [DRC DPIP-2] Input pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 output system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 multiplier stage system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC REQP-1774] RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32: The RAMB36E2 cell system_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+WARNING: [DRC REQP-1774] RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32: The RAMB36E2 cell system_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+WARNING: [DRC RTSTAT-10] No routable loads: 153 net(s) have no routable loads. The problem bus(es) and/or net(s) are system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu, system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu, system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12], system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13], system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[14], system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[15], system_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0]... and (the first 15 of 144 listed).
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+218 Infos, 105 Warnings, 5 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:02:04 ; elapsed = 00:02:10 . Memory (MB): peak = 5311.734 ; gain = 484.020
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 14:30:31 2017...

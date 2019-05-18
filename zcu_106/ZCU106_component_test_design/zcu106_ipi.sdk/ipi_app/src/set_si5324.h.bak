@@ -1,0 +1,153 @@
+/******************************************************************************
+*
+* Copyright (C) 2008 - 2015 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+#ifndef SET_SI5324_CMDS_H_
+#define SET_SI5324_CMDS_H_
+
+#define ERR_IIC_INIT_1          0x00010001
+#define ERR_IIC_INIT_2          0x00010002
+#define ERR_IIC_INIT_3          0x00010003
+#define ERR_IIC_INIT_4          0x00010004
+#define ERR_IIC_WRITE_1         0x00010005
+#define ERR_IIC_READ_1          0x00010006
+#define ERR_IIC_READ_2          0x00010007
+#define ERR_IIC_GPIO_EXPANDER_1 0x00010008
+#define ERR_IIC_GPIO_EXPANDER_2 0x00010009
+#define ERR_IIC_WRITE_TCA9548   0x0001000A
+#define ERR_IIC_WRITE_TCA9544   0x0001000B
+#define ERR_IIC_WRITE_TCA9543   0x0001000C
+#define ERR_PMBUS_1             0x0002000D
+#define ERR_PMBUS_2             0x0002000E
+#define ERR_PMBUS_3             0x0002000F
+#define ERR_PMBUS_4             0x00020010
+#define ERR_PMBUS_5             0x00020011
+#define ERR_PMBUS_6             0x00020012
+#define ERR_PMBUS_7             0x00020013
+#define ERR_SYSMON_1            0x00030014
+
+extern int sys_errno;
+extern char sys_errmsg[20][80];
+
+
+#define two_to_37 (double) 137438953472.0
+#define two_to_32 (double)   4294967296.0
+#define two_to_28 (double)    268435456.0
+#define two_to_24 (double)     16777216.0
+#define two_to_20 (double)      1048576.0
+#define two_to_19 (double)       524288.0
+#define two_to_16 (double)        65536.0
+#define two_to_8  (double)          256.0
+
+#define SI53XX_XA 114.285
+
+#define SI5368_KCU1250       0
+#define SI5368_VCU1287       1
+#define SI5368_XM104_0_HPC  2
+#define SI5368_XM104_0_LPC  3
+#define SI5368_XM104_0_HPC0 4
+#define SI5368_XM104_0_HPC1 5
+#define SI5368_XM104_0_FMC1 6
+#define SI5368_XM104_0_FMC2 7
+#define SI5368_XM104_0_FMC3 8
+
+#define SI5328_KCU105          0
+#define SI5328_VCU107          1
+#define SI5328_VCU109_ILKN     2
+#define SI5328_VCU109_EXAMAX   3
+#define SI5328_VCU109_HMC_MEM  4
+#define SI5328_VCU109_HMC_FPGA 5
+#define SI5328_VCU109_CFP4     6
+#define SI5328_VCU109_ILKN_EXAMAX  7
+#define SI5328_VCU109_HMC_MEM_FPGA 8
+#define SI5328_VCU109_HMC_10G      9
+#define SI5328_VCU109_HMC_12P5G    10
+#define SI5328_VCU109_HMC_15G      11
+#define SI5328_VCU109_HMC_125      12
+#define SI5328_VCU109_HMC_156_25   13
+#define SI5328_ZCU102              14
+
+#define SI5341_IIC_ADDR 0x36
+#define SI5341_REG_PAGE 0x01
+#define SI5341_USER_ZCU102A 0x00
+
+#define SI5341_PAGE0    0x00
+#define SI5341_PAGE1    0x01
+#define SI5341_PAGE2    0x02
+#define SI5341_PAGE3    0x03
+#define SI5341_PAGE9    0x09
+typedef struct
+{
+ double oFreq[4];
+ double iFreq[4];
+ unsigned long int   N1;
+ unsigned long int   N1_HS;
+ unsigned long int   NC1_LS;
+ unsigned long int   NC2_LS;
+ unsigned long int   NC3_LS;
+ unsigned long int   NC4_LS;
+ unsigned long int   NC5_LS;
+ unsigned long int   N2;
+ unsigned long int   N2_HS;
+ unsigned long int   N2_LS;
+ unsigned long int   N31;
+ unsigned long int   N32;
+ unsigned long int   N33;
+ unsigned long int   N34;
+ unsigned long int   BWSEL;
+ unsigned long int   DSBL1;
+ unsigned long int   DSBL2;
+ unsigned long int   DSBL3;
+ unsigned long int   DSBL4;
+ unsigned long int   DSBL5;
+ unsigned long int   CLKIN1RATE;
+ unsigned long int   CLKIN2RATE;
+ unsigned long int   CLKIN3RATE;
+ unsigned long int   CLKIN4RATE;
+} DSPLL_struct;
+
+//extern void si5368_menu(XIicPs *Iic, u8 clk_id);
+//extern void si5368_set_simple(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//extern void si5368_set_advanced(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//extern int  si5368_calc_freq(DSPLL_struct *DSPLL);
+//extern void si5368_write_freq(XIicPs *Iic, u8 Addr, DSPLL_struct *DSPLL);
+//extern void si5368_set_inclk(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//
+//extern void si5328_menu(XIicPs *Iic, u8 clk_id);
+//extern void si5328_set_simple(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//extern void si5328_set_advanced(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//extern int  si5328_calc_freq(DSPLL_struct *DSPLL);
+//extern void si5328_write_freq(XIicPs *Iic, u8 Addr, DSPLL_struct *DSPLL);
+//extern void si5328_set_inclk(XIicPs *Iic, u8 P0_Addr, u8 P0_Port, u8 Si_Addr, DSPLL_struct *DSPLL);
+//
+//extern int  dspll_calc_freq(DSPLL_struct *DSPLL);
+//extern void dspll_cinrate(double Freq, int *CinRate);
+
+#endif /* SET_SI5324_CMDS_H_ */

@@ -1,0 +1,41 @@
+13:46:52 **** Build of configuration Debug for project zynq_mp_dram_test ****
+make all 
+'Building file: ../src/common_functions.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/common_functions.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/common_functions.d" -MT"src/common_functions.o" -o "src/common_functions.o" "../src/common_functions.c"
+'Finished building: ../src/common_functions.c'
+' '
+'Building file: ../src/memtest.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/memtest.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/memtest.d" -MT"src/memtest.o" -o "src/memtest.o" "../src/memtest.c"
+'Finished building: ../src/memtest.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/rd_eye.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rd_eye.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/rd_eye.d" -MT"src/rd_eye.o" -o "src/rd_eye.o" "../src/rd_eye.c"
+'Finished building: ../src/rd_eye.c'
+' '
+'Building file: ../src/wr_eye.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/wr_eye.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/wr_eye.d" -MT"src/wr_eye.o" -o "src/wr_eye.o" "../src/wr_eye.c"
+'Finished building: ../src/wr_eye.c'
+' '
+'Building target: zynq_mp_dram_test.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "zynq_mp_dram_test.elf"  ./src/common_functions.o ./src/memtest.o ./src/platform.o ./src/rd_eye.o ./src/wr_eye.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zynq_mp_dram_test.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size zynq_mp_dram_test.elf  |tee "zynq_mp_dram_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156436	   7160	  26188	 189784	  2e558	zynq_mp_dram_test.elf
+'Finished building: zynq_mp_dram_test.elf.size'
+' '
+
+13:47:00 Build Finished (took 7s.843ms)
+

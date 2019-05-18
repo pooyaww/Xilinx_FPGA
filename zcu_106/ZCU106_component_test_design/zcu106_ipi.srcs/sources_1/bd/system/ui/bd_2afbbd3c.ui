@@ -1,0 +1,100 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port FMC_HPC0_CLK0_M2C -pg 1 -y 480 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 2360 -defaultsOSRD
+preplace port FMC_HPC0_GBTCLK1_M2C -pg 1 -y 900 -defaultsOSRD
+preplace port FMC_HPC0_CLK1_M2C -pg 1 -y 620 -defaultsOSRD
+preplace port USER_MGT_SI570_CLOCK1 -pg 1 -y 1740 -defaultsOSRD
+preplace port USER_MGT_SI570_CLOCK2 -pg 1 -y 1880 -defaultsOSRD
+preplace port FMC_HPC1_GBTCLK0_M2C -pg 1 -y 1180 -defaultsOSRD
+preplace port CLK_125 -pg 1 -y 210 -defaultsOSRD
+preplace port HDMI_SI5324_OUT -pg 1 -y 1460 -defaultsOSRD
+preplace port FMC_HPC1_CLK0_M2C -pg 1 -y 1040 -defaultsOSRD
+preplace port USER_SMA_MGT_CLOCK -pg 1 -y 2020 -defaultsOSRD
+preplace port CLK_74_25 -pg 1 -y 340 -defaultsOSRD
+preplace port SFP_SI5328_OUT -pg 1 -y 1600 -defaultsOSRD
+preplace port FMC_HPC0_GBTCLK0_M2C -pg 1 -y 760 -defaultsOSRD
+preplace port REF_CLK_I -pg 1 -y 250 -defaultsOSRD
+preplace port HDMI_RX_CLK -pg 1 -y 1320 -defaultsOSRD
+preplace portBus s_axi_aresetn -pg 1 -y 2120 -defaultsOSRD
+preplace portBus RST_I -pg 1 -y 230 -defaultsOSRD
+preplace inst gt_freq_counter_1 -pg 1 -lvl 1 -y 1900 -defaultsOSRD
+preplace inst diff_freq_counter_3 -pg 1 -lvl 1 -y 1060 -defaultsOSRD
+preplace inst FMC_HPC0_CLK0_M2C -pg 1 -lvl 2 -y 510 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_2 -pg 1 -lvl 1 -y 780 -defaultsOSRD
+preplace inst diff_freq_counter_4 -pg 1 -lvl 1 -y 230 -defaultsOSRD
+preplace inst FMC_HPC0_GBTCLK1_M2C -pg 1 -lvl 2 -y 930 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_3 -pg 1 -lvl 1 -y 920 -defaultsOSRD
+preplace inst diff_freq_counter_5 -pg 1 -lvl 1 -y 360 -defaultsOSRD
+preplace inst FMC_HPC0_CLK1_M2C -pg 1 -lvl 2 -y 650 -defaultsOSRD -orient R180
+preplace inst USER_MGT_SI570_CLOCK1 -pg 1 -lvl 2 -y 1770 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_5 -pg 1 -lvl 1 -y 1200 -defaultsOSRD
+preplace inst USER_MGT_SI570_CLOCK2 -pg 1 -lvl 2 -y 1910 -defaultsOSRD -orient R180
+preplace inst FMC_HPC1_GBTCLK0_M2C -pg 1 -lvl 2 -y 1210 -defaultsOSRD -orient R180
+preplace inst CLK_125 -pg 1 -lvl 2 -y 230 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_6 -pg 1 -lvl 1 -y 2040 -defaultsOSRD
+preplace inst gt_freq_counter_7 -pg 1 -lvl 1 -y 1760 -defaultsOSRD
+preplace inst gt_freq_counter_8 -pg 1 -lvl 1 -y 1340 -defaultsOSRD
+preplace inst HDMI_SI5324_OUT -pg 1 -lvl 2 -y 1490 -defaultsOSRD -orient R180
+preplace inst FMC_HPC1_CLK0_M2C -pg 1 -lvl 2 -y 1070 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_9 -pg 1 -lvl 1 -y 1480 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 1160 -defaultsOSRD -orient R180 -resize 268 2292
+preplace inst USER_SMA_MGT_CLOCK -pg 1 -lvl 2 -y 2050 -defaultsOSRD -orient R180
+preplace inst CLK_74_25 -pg 1 -lvl 2 -y 370 -defaultsOSRD -orient R180
+preplace inst diff_freq_counter_0 -pg 1 -lvl 1 -y 640 -defaultsOSRD
+preplace inst SFP_SI5328_OUT -pg 1 -lvl 2 -y 1630 -defaultsOSRD -orient R180
+preplace inst FMC_HPC0_GBTCLK0_M2C -pg 1 -lvl 2 -y 790 -defaultsOSRD -orient R180
+preplace inst HDMI_RX_CLK -pg 1 -lvl 2 -y 1350 -defaultsOSRD -orient R180
+preplace inst gt_freq_counter_0 -pg 1 -lvl 1 -y 1620 -defaultsOSRD
+preplace inst diff_freq_counter_2 -pg 1 -lvl 1 -y 500 -defaultsOSRD
+preplace netloc axi_interconnect_0_M09_AXI 1 2 1 N
+preplace netloc Conn1 1 0 4 NJ 2360 NJ 2360 NJ 2360 940
+preplace netloc Conn16 1 0 1 NJ
+preplace netloc Conn17 1 0 1 NJ
+preplace netloc Conn2 1 0 1 NJ
+preplace netloc diff_freq_counter_3_FREQ_CNT_O 1 1 1 N
+preplace netloc diff_freq_counter_0_FREQ_CNT_O 1 1 1 N
+preplace netloc axi_interconnect_0_M13_AXI 1 2 1 N
+preplace netloc axi_interconnect_0_M12_AXI 1 2 1 N
+preplace netloc Conn3 1 0 1 NJ
+preplace netloc s_axi_aresetn_1 1 0 4 NJ 2120 NJ 2120 610 2330 970
+preplace netloc Conn4 1 0 1 NJ
+preplace netloc RST_I_1 1 0 4 20 2350 NJ 2350 NJ 2350 950
+preplace netloc axi_interconnect_0_M10_AXI 1 2 1 N
+preplace netloc axi_interconnect_0_M02_AXI 1 2 1 N
+preplace netloc Conn5 1 0 1 NJ
+preplace netloc gt_freq_counter_3_FREQ_CNT_O 1 1 1 N
+preplace netloc gt_freq_counter_0_FREQ_CNT_O 1 1 1 N
+preplace netloc diff_freq_counter_4_FREQ_CNT_O 1 1 1 330
+preplace netloc gt_freq_counter_6_FREQ_CNT_O 1 1 1 N
+preplace netloc gt_freq_counter_2_FREQ_CNT_O 1 1 1 N
+preplace netloc axi_interconnect_0_M07_AXI 1 2 1 N
+preplace netloc Conn7 1 0 1 NJ
+preplace netloc REF_CLK_I_1 1 0 4 30 160 NJ 160 620 2340 960
+preplace netloc axi_interconnect_0_M08_AXI 1 2 1 N
+preplace netloc axi_interconnect_0_M04_AXI 1 2 1 N
+preplace netloc Conn10 1 0 1 NJ
+preplace netloc Conn8 1 0 1 NJ
+preplace netloc gt_freq_counter_5_FREQ_CNT_O 1 1 1 N
+preplace netloc Conn11 1 0 1 NJ
+preplace netloc Conn9 1 0 1 NJ
+preplace netloc gt_freq_counter_7_FREQ_CNT_O 1 1 1 N
+preplace netloc axi_interconnect_0_M05_AXI 1 2 1 N
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 N
+preplace netloc Conn12 1 0 1 NJ
+preplace netloc gt_freq_counter_8_FREQ_CNT_O 1 1 1 N
+preplace netloc diff_freq_counter_2_FREQ_CNT_O 1 1 1 N
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 N
+preplace netloc diff_freq_counter_0_FREQ_CNT_O5 1 1 1 N
+preplace netloc axi_interconnect_0_M06_AXI 1 2 1 N
+preplace netloc Conn14 1 0 1 NJ
+preplace netloc gt_freq_counter_9_FREQ_CNT_O 1 1 1 N
+preplace netloc gt_freq_counter_1_FREQ_CNT_O 1 1 1 N
+preplace netloc axi_interconnect_0_M11_AXI 1 2 1 N
+preplace netloc axi_interconnect_0_M03_AXI 1 2 1 N
+preplace netloc Conn15 1 0 1 NJ
+levelinfo -pg 1 0 180 470 780 990 -top 0 -bot 2380
+",
+}
+0

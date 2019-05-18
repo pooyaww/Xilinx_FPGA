@@ -1,0 +1,1056 @@
+/* $Id: xiic_eeprom_example.c,v 1.1.4.2 2009/03/24 05:47:25 svemula Exp $
+*/
+/******************************************************************************
+*
+* (c) Copyright 2006-2009 Xilinx, Inc. All rights reserved.
+*
+* This file contains confidential and proprietary information of Xilinx, Inc.
+* and is protected under U.S. and international copyright and other
+* intellectual property laws.
+*
+* DISCLAIMER
+* This disclaimer is not a license and does not grant any rights to the
+* materials distributed herewith. Except as otherwise provided in a valid
+* license issued to you by Xilinx, and to the maximum extent permitted by
+* applicable law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND WITH ALL
+* FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS,
+* IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+* MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE;
+* and (2) Xilinx shall not be liable (whether in contract or tort, including
+* negligence, or under any other theory of liability) for any loss or damage
+* of any kind or nature related to, arising under or in connection with these
+* materials, including for any direct, or any indirect, special, incidental,
+* or consequential loss or damage (including loss of data, profits, goodwill,
+* or any type of loss or damage suffered as a result of any action brought by
+* a third party) even if such damage or loss was reasonably foreseeable or
+* Xilinx had been advised of the possibility of the same.
+*
+* CRITICAL APPLICATIONS
+* Xilinx products are not designed or intended to be fail-safe, or for use in
+* any application requiring fail-safe performance, such as life-support or
+* safety devices or systems, Class III medical devices, nuclear facilities,
+* applications related to the deployment of airbags, or any other applications
+* that could lead to death, personal injury, or severe property or
+* environmental damage (individually and collectively, "Critical
+* Applications"). Customer assumes the sole risk and liability of any use of
+* Xilinx products in Critical Applications, subject only to applicable laws
+* and regulations governing limitations on product liability.
+*
+* THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS PART OF THIS FILE
+* AT ALL TIMES.
+*
+******************************************************************************/
+/*****************************************************************************/
+/**
+* @file xiic_eeprom_example.c
+*
+* This file consists of a Interrupt mode design example which uses the Xilinx
+* IIC device and XIic driver to exercise the EEPROM. The XIic driver uses the
+* complete FIFO functionality to transmit/receive data.
+* The XIic_MasterSend() API is used to transmit the data and
+* XIic_MasterRecv() API is used to receive the data.
+*
+* The example is tested on ML300/ML310/ML403/ML501 Xilinx boards.
+*
+* The ML310 board has an IIC EEPROM on the board which is a 8Kbyte serial
+* EEPROM(Microchip 24LC64A). The WP pin of the EEPROM-Microchip 24LC64A
+* is hardwired to ground on this board.
+*
+* The ML300 board has an IIC EEPROM on the board which is a 4Kbyte serial
+* EEPROM(Microchip 24LC32A). The WP pin of the EEPROM-Microchip 24LC32A has to
+* be connected to ground for this example. The WP is connected to pin Y3 of
+* the FPGA.
+*
+* The ML403/ML501 board has an IIC EEPROM on the board which is a 1Kbyte serial
+* EEPROM(Microchip 24LC04A). The WP pin of the EEPROM-Microchip 24LC04A
+* is hardwired to ground on this board.
+*
+* The AddressType for ML300/ML310 boards should be u16 as the address
+* pointer in the on board EEPROM is 2 bytes.
+* The AddressType for ML403/ML501 boards should be u8 as the address pointer in
+* the on board EEPROM is 1 bytes.
+*
+* This code assumes that no Operating System is being used.
+*
+* @note
+*
+* None.
+*
+* <pre>
+* MODIFICATION HISTORY:
+*
+* Ver   Who  Date     Changes
+* ----- ---- -------- ---------------------------------------------------------
+* 1.00a mta  02/24/06 Created.
+* 1.00a mta  04/05/07 Added support for microblaze.
+* </pre>
+*
+******************************************************************************/
+
+/***************************** Include Files *********************************/
+
+#include "xparameters.h"
+#include "xiic.h"
+#include "xintc.h"
+#include "xuartns550_l.h"
+#include "xbasic_types.h"
+#include "platform.h"
+
+#if !SIM
+#include "stdio.h"
+#endif
+
+
+#ifdef __MICROBLAZE__
+#include "mb_interface.h"
+#endif
+
+#ifdef __PPC__
+#include "xexception_l.h"
+#endif
+
+/************************** Constant Definitions *****************************/
+
+// PCA9548 8-port IIC Switch
+#define IIC_SWITCH_ADDRESS 0x74
+// Connected to IIC Buses
+// Bus 0
+#define IIC_SI570_ADDRESS  0x5D
+// Bus 1
+#define IIC_FMC_HPC_ADDRESS 0x70
+// Bus 2
+#define IIC_FMC_LPC_ADDRESS 0x70
+// Bus 3
+#define IIC_EEPROM_ADDRESS 0x54
+// Bus 4
+#define IIC_SFP_ADDRESS 0x50
+// Bus 5
+#define IIC_ADV7511_ADDRESS 0x39
+// Bus 6
+#define IIC_DDR3_SPD_ADDRESS 0x50
+#define IIC_DDR3_TEMP_ADDRESS 0x18
+// Bus 7
+#define IIC_SI5326_ADDRESS 0x68
+
+#define IIC_BUS_0 0x01
+#define IIC_BUS_1 0x02
+#define IIC_BUS_2 0x04
+#define IIC_BUS_3 0x08
+#define IIC_BUS_4 0x10
+#define IIC_BUS_5 0x20
+#define IIC_BUS_6 0x40
+#define IIC_BUS_7 0x80
+
+
+#ifndef UART_BASEADDR
+#define UART_BASEADDR XPAR_UARTNS550_0_BASEADDR
+#endif
+#define UART_CLOCK    XPAR_UARTNS550_0_CLOCK_FREQ_HZ
+
+#if !SIM
+#define UART_BAUDRATE 9600                      /* real hardware */
+#else
+#define UART_BAUDRATE (UART_CLOCK / 16 / 3)     /* simulation */
+#endif
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define IIC_DEVICE_ID               XPAR_IIC_0_DEVICE_ID
+#define INTC_DEVICE_ID              XPAR_INTC_0_DEVICE_ID
+#define IIC_INTR_ID                 XPAR_INTC_0_IIC_0_VEC_ID
+
+/*
+ * The following constant defines the address of the IIC Slave device on the
+ * IIC bus. Note that since the address is only 7 bits, this constant is the
+ * address divided by 2.
+ */
+#define EEPROM_ADDRESS 0x54	/* 0xA0 as an 8 bit number. */
+
+/*
+ * The page size determines how much data should be written at a time.
+ * The ML310/ML300 board supports a page size of 32 and 16.
+ * The write function should be called with this as a maximum byte count.
+ */
+//#define PAGE_SIZE   16
+#define PAGE_SIZE   8
+/*
+ * The Starting address in the IIC EEPROM on which this test is performed.
+ */
+//#define EEPROM_TEST_START_ADDRESS   0x86
+#define EEPROM_TEST_START_ADDRESS   0x00
+
+#define MAX_DELAY_COUNT 10000000
+
+/**************************** Type Definitions *******************************/
+
+/*
+ * The AddressType for ML300/ML310 boards should be u16 as the address
+ * pointer in the on board EEPROM is 2 bytes.
+ * The AddressType for ML403 boards should be u8 as the address pointer in the
+ * on board EEPROM is 1 bytes.
+ */
+typedef u8 AddressType;
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+/************************** Function Prototypes ******************************/
+
+#if SIM
+static void printf(char *s)
+{
+  while (*s) {
+    XUartNs550_SendByte(UART_BASEADDR, *s);
+    s++;
+  }
+}
+#endif
+
+int read5324();
+
+int IicEepromExample();
+
+int EepromWriteDataSi5324(u16 ByteCount);
+
+int EepromReadDataSi5324(u8 *BufferPtr, u16 ByteCount);
+
+int EepromReadDataSi53242(AddressType addr, u8 *BufferPtr, u16 ByteCount);
+
+static int SetupInterruptSystem(XIic * IicInstPtr);
+
+static void SendHandler(XIic * InstancePtr);
+
+static void ReceiveHandler(XIic * InstancePtr);
+
+static void StatusHandler(XIic * InstancePtr, int Event);
+
+/************************** Variable Definitions *****************************/
+
+XIic IicInstance;		/* The instance of the IIC device. */
+XIntc InterruptController;	/* The instance of the Interrupt Controller. */
+
+/*
+ * Write buffer for writing a page.
+ */
+u8 WriteBuffer[sizeof(AddressType) + PAGE_SIZE];
+
+u8 ReadBuffer[PAGE_SIZE];	/* Read buffer for reading a page. */
+
+volatile u8 TransmitComplete;	/* Flag to check completion of Transmission */
+volatile u8 ReceiveComplete;	/* Flag to check completion of Reception */
+
+/************************** Function Definitions *****************************/
+
+/*
+ * Return to the bootloader via it's well-known vector at 0x40
+ */
+static void
+return_to_loader()
+{
+    void (*loader_start1)();
+
+    loader_start1 = (void*) (*(unsigned*)0x40);
+    if (loader_start1) {
+        (*loader_start1)();
+    }
+}
+
+/*****************************************************************************/
+/**
+* Main function to call the High level EEPROM example.
+*
+* @param	None.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+int set_hdmi_si5324_out(void)
+{
+    int Status;
+
+   // XUartNs550_SetBaud(UART_BASEADDR, UART_CLOCK, UART_BAUDRATE);
+   // XUartNs550_SetLineControlReg(UART_BASEADDR, XUN_LCR_8_DATA_BITS);
+
+    //init_platform();
+
+    /*
+     * Run the High Level EEPROM example.
+     */
+	Status = IicEepromExample();
+	if (Status != XST_SUCCESS) {
+		xil_printf("Failed\r\n");
+		return XST_FAILURE;
+	}
+	xil_printf("Passed!\r\n");
+
+	//return_to_loader();
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+* This function writes, reads, and verifies the data to the IIC EEPROM. It
+* does the write as a single page write, performs a buffered read.
+*
+* @param	None.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+int IicEepromExample()
+{
+	u32 Index;
+	int Status;
+	AddressType Address = EEPROM_TEST_START_ADDRESS;
+//	AddressType addr;
+//	unsigned char knownval[2]={0x01,0x82};
+//	u32 delay;
+//	AddressType reg_addr;
+
+	/*
+	 * Initialize the IIC device Instance.
+	 */
+	Status = XIic_Initialize(&IicInstance, IIC_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XIic_Initialize FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	// Release reset on the PCA9548 IIC Switch
+	XIic_SetGpOutput(&IicInstance, 0xFF);
+
+
+	/*
+	 * Setup the Interrupt System.
+	 */
+	Status = SetupInterruptSystem(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SetupInterruptSystem FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Set the Handlers for transmit and reception.
+	 */
+	XIic_SetSendHandler(&IicInstance, &IicInstance,
+			    (XIic_Handler) SendHandler);
+	XIic_SetRecvHandler(&IicInstance, &IicInstance,
+			    (XIic_Handler) ReceiveHandler);
+	XIic_SetStatusHandler(&IicInstance, &IicInstance,
+			      (XIic_StatusHandler) StatusHandler);
+
+	/*
+	 * Initialize the data to write and the read buffer.
+	 */
+	if (sizeof(Address) == 1) {
+		WriteBuffer[0] = (u8) (Address);
+	}
+	else {
+		WriteBuffer[0] = (u8) (Address >> 8);
+		WriteBuffer[1] = (u8) (Address);
+		ReadBuffer[Index] = 0;
+	}
+
+	xil_printf("\r\n");
+// No Mux for the HDMI_CTL
+//	/*
+//	 * Set the Slave address to the PCA9543A.
+//	 */
+//	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,
+//				 IIC_SWITCH_ADDRESS);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("XIic_SetAddress to PCA9548 FAILED\r\n");
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Write to the IIC Switch.
+//	 */
+//	WriteBuffer[0] = 0x80; //Select Bus7 - Si5326
+//	Status = EepromWriteDataSi5324(1);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("PCA9548 FAILED to select Si5324 IIC Bus\r\n");
+//		return XST_FAILURE;
+//	}
+/*
+ * EEPROM Write/Read *
+ *
+ */
+//	xil_printf("Writing data to EEPROM address offset 0x%02x: ", Address);
+//	for (Index = 0; Index < PAGE_SIZE; Index++) {
+//		WriteBuffer[sizeof(Address) + Index] = Index;
+//		ReadBuffer[Index] = 0;
+//		xil_printf("%02x", WriteBuffer[sizeof(Address) + Index]);
+//	}
+//	xil_printf("\r\n");
+//	for (Index = 0; Index < PAGE_SIZE; Index++) {
+//		xil_printf("ReadBuffer[%02d] = %02X\r\n", Index, ReadBuffer[Index]);
+//	}
+//	xil_printf("\r\n\r\n");
+
+	/*
+	 * Set the Slave address to the EEPROM
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,
+			IIC_SI5326_ADDRESS);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize the data to write and the read buffer.
+	 */
+	if (sizeof(Address) == 1) {
+		WriteBuffer[0] = (u8) (Address);
+	}
+	else {
+		WriteBuffer[0] = (u8) (Address >> 8);
+		WriteBuffer[1] = (u8) (Address);
+		ReadBuffer[Index] = 0;
+	}
+
+//    xil_printf("Writing data to eeprom at 0x%02x: ", Address);
+//	for (Index = 0; Index < PAGE_SIZE; Index++) {
+//		WriteBuffer[sizeof(Address) + Index] = Index;
+//		ReadBuffer[Index] = 0;
+//        xil_printf("%02x", WriteBuffer[sizeof(Address) + Index]);
+//	}
+//    xil_printf("\r\n");
+
+	/*
+	 * Write to the EEPROM.
+	 */
+//	Status = EepromWriteDataSi5324(sizeof(Address) + PAGE_SIZE);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+
+	/*
+	 * Read from the EEPROM.
+	 */
+    xil_printf("Reading data from Si5324 at Address Offset %X\r\n", Address);
+	Status = EepromReadDataSi5324(ReadBuffer, PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+	    xil_printf("Si5324 EepromReadDataSi5324 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("\r\n");
+	for (Index = 0; Index < PAGE_SIZE; Index++) {
+		xil_printf("ReadBuffer[%02d] = 0x%02X\r\n", Index, ReadBuffer[Index]);
+	}
+	xil_printf("\r\n\r\n");
+
+	/*
+	 * Verify the data read against the data written.
+	 */
+//    xil_printf("Comparing read data\r\n");
+//	for (Index = 0; Index < PAGE_SIZE; Index++) {
+//		if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+//			return XST_FAILURE;
+//		}
+//
+//		ReadBuffer[Index] = 0;
+//	}
+
+	/*
+	 * Initialize the data to write and the read buffer.
+	 */
+//	if (sizeof(Address) == 1) {
+//		WriteBuffer[0] = (u8) (Address);
+//	}
+//	else {
+//		WriteBuffer[0] = (u8) (Address >> 8);
+//		WriteBuffer[1] = (u8) (Address);
+//		ReadBuffer[Index] = 0;
+//	}
+//
+//	for (Index = 0; Index < 1; Index++) {
+//		WriteBuffer[sizeof(Address) + Index] = 0x16; // Bypass PLL
+//		//WriteBuffer[sizeof(Address) + Index] = 0x14; // Default go through PLL
+//		ReadBuffer[Index] = 0;
+//	}
+
+
+	/*
+	 * Write to the EEPROM.
+	 */
+//	Status = EepromWriteDataSi5324(sizeof(Address) + 1);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+
+// Change to 1 to set Si5324 into Bypass PLL mode
+#if 0
+	// Write Reg 0 to set BYPASS
+	WriteBuffer[0] = 0;
+	WriteBuffer[1] = 0x16; // 0x16 sets Bypass mode; 0x14 sets non-Bypass mode.
+	Status = EepromWriteDataSi5324(2);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Reg 0 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read from the EEPROM.
+	 */
+	Status = EepromReadDataSi5324(ReadBuffer, PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("\r\n");
+	for (Index = 0; Index < PAGE_SIZE; Index++) {
+		xil_printf("ReadBuffer[%02d] = 0x%02X\r\n", Index, ReadBuffer[Index]);
+	}
+#endif
+
+// Change to 1 to set Si5324 Loop Bandwidth (BWSEL)
+#if 1
+
+	// Read Si5324 regs before update
+	read5324();
+
+	// Write Reg 2 to set Loop Bandwidth (BWSEL)
+	WriteBuffer[0] = 2;
+	WriteBuffer[1] = 0x72; //Default is 0x42 equals 487 Hz; 0x72 equals 58 Hz
+	Status = EepromWriteDataSi5324(2);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Reg 2 FAILED\r\n");
+		return XST_FAILURE;
+	}
+	// Write Reg 25 to set N1_HS = 6
+	WriteBuffer[0] = 25;
+	WriteBuffer[1] = 0x40;
+	Status = EepromWriteDataSi5324(2);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Reg 25 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	// Write Regs 31,32,33 to set NC1_LS = 6
+	WriteBuffer[0] = 31;
+	WriteBuffer[1] = 0x00;
+	WriteBuffer[2] = 0x00;
+	WriteBuffer[3] = 0x05;
+	Status = EepromWriteDataSi5324(4);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Regs 31,32,33 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	// Write Regs 40,41,42 to set N2_HS = 9, N2_LS = 316
+	WriteBuffer[0] = 40;
+	WriteBuffer[1] = 0xA0;
+	WriteBuffer[2] = 0x01;
+	WriteBuffer[3] = 0x3B;
+	Status = EepromWriteDataSi5324(4);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Regs 40,41,42 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	// Write Regs 43,44,45 to set N31 = 79
+	WriteBuffer[0] = 43;
+	WriteBuffer[1] = 0x00;
+	WriteBuffer[2] = 0x00;
+	WriteBuffer[3] = 0x4E;
+	Status = EepromWriteDataSi5324(4);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Regs 43,44,45 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	// Read Si5324 regs after update
+	read5324();
+
+    // Start Si5324 Internal Calibration process
+	// Write Reg 136 to set ICAL = 1
+	WriteBuffer[0] = 136;
+	WriteBuffer[1] = 0x40;
+	Status = EepromWriteDataSi5324(2);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Write to Reg 136 FAILED\r\n");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read from the EEPROM.
+	 */
+//	Status = EepromReadDataSi5324(ReadBuffer, PAGE_SIZE);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//	xil_printf("\r\n");
+//	for (Index = 0; Index < PAGE_SIZE; Index++) {
+//		xil_printf("ReadBuffer[%02d] = %02X\r\n", Index, ReadBuffer[Index]);
+//	}
+
+
+
+
+
+
+	/*
+	 * Verify the data read against the data written.
+	 */
+//    xil_printf("Comparing read data\r\n");
+//	for (Index = 0; Index < sizeof(knownval); Index++) {
+//
+//		if (ReadBuffer[Index] != knownval[Index]) {
+//			xil_printf("ReadBuffer[%02d] = %02X\r\n", Index, ReadBuffer[Index]);
+//			xil_printf("knownval[%02d] = %02X\r\n", Index, knownval[Index]);
+//			return XST_FAILURE;
+//		}
+//
+//		ReadBuffer[Index] = 0;
+//	}
+#endif
+
+	return XST_SUCCESS;
+}
+
+
+
+int read5324()
+{
+	u32 Index;
+	int Status;
+//	AddressType Address = EEPROM_TEST_START_ADDRESS;
+//	AddressType addr;
+//	u32 delay;
+	AddressType reg_addr;
+
+    /*
+ * Read from Si5324
+ * Addr, Bit Field Description
+ * 25, N1_HS
+ * 31, NC1_LS
+ * 40, N2_HS
+ * 40, N2_LS
+ * 43, N31
+ */
+//    for( delay = 0; delay < MAX_DELAY_COUNT; delay++);
+
+	reg_addr = 25; //N1_HS
+	Status = EepromReadDataSi53242(reg_addr, ReadBuffer, 1);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("\r\n");
+	for (Index = 0; Index < 1; Index++) {
+
+		xil_printf("Reg %d: N1_HS = 0x%02X\r\n", reg_addr, ReadBuffer[0]);
+	}
+
+	reg_addr = 31; //NC1_LS
+	Status = EepromReadDataSi53242(reg_addr, ReadBuffer, 3);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("\r\n");
+	for (Index = 0; Index < 3; Index++) {
+		xil_printf("Reg %d: NC1_LS = 0x%02X\r\n", reg_addr++, ReadBuffer[Index]);
+	}
+
+	reg_addr = 40; //N2_HS, N2_LS
+	Status = EepromReadDataSi53242(reg_addr, ReadBuffer, 3);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("\r\n");
+	for (Index = 0; Index < 3; Index++) {
+		xil_printf("Reg %d: N2_HS_LS = 0x%02X\r\n",reg_addr++, ReadBuffer[Index]);
+	}
+
+	reg_addr = 43; //N31
+	Status = EepromReadDataSi53242(reg_addr, ReadBuffer, 3);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	xil_printf("\r\n");
+	for (Index = 0; Index < 3; Index++) {
+		xil_printf("Reg %d: N31 = 0x%02X\r\n", reg_addr++, ReadBuffer[Index]);
+	}
+    return XST_SUCCESS;
+}
+
+
+
+
+
+
+/*****************************************************************************/
+/**
+* This function writes a buffer of data to the IIC serial EEPROM.
+*
+* @param	ByteCount contains the number of bytes in the buffer to be
+*		written.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The Byte count should not exceed the page size of the EEPROM as
+*		noted by the constant PAGE_SIZE.
+*
+******************************************************************************/
+int EepromWriteDataSi5324(u16 ByteCount)
+{
+	int Status;
+
+	/*
+	 * Set the defaults.
+	 */
+	TransmitComplete = 1;
+	IicInstance.Stats.TxErrors = 0;
+
+	/*
+	 * Start the IIC device.
+	 */
+	Status = XIic_Start(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Send the Data.
+	 */
+	Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Wait till the transmission is completed.
+	 */
+	while ((TransmitComplete) || (XIic_IsIicBusy(&IicInstance) == TRUE)) {
+		/*
+		 * This condition is required to be checked in the case where we
+		 * are writing two consecutive buffers of data to the EEPROM.
+		 * The EEPROM takes about 2 milliseconds time to update the data
+		 * internally after a STOP has been sent on the bus.
+		 * A NACK will be generated in the case of a second write before
+		 * the EEPROM updates the data internally resulting in a
+		 * Transmission Error.
+		 */
+		if (IicInstance.Stats.TxErrors != 0) {
+
+
+			/*
+			 * Enable the IIC device.
+			 */
+			Status = XIic_Start(&IicInstance);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+
+
+			if (!XIic_IsIicBusy(&IicInstance)) {
+				/*
+				 * Send the Data.
+				 */
+				Status = XIic_MasterSend(&IicInstance,
+							 WriteBuffer,
+							 ByteCount);
+				if (Status == XST_SUCCESS) {
+					IicInstance.Stats.TxErrors = 0;
+				}
+				else {
+				}
+			}
+		}
+	}
+
+	/*
+	 * Stop the IIC device.
+	 */
+	Status = XIic_Stop(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+* This function reads data from the IIC serial EEPROM into a specified buffer.
+*
+* @param	BufferPtr contains the address of the data buffer to be filled.
+* @param	ByteCount contains the number of bytes in the buffer to be read.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+int EepromReadDataSi5324(u8 *BufferPtr, u16 ByteCount)
+{
+	int Status;
+	AddressType Address = EEPROM_TEST_START_ADDRESS;
+
+	/*
+	 * Set the Defaults.
+	 */
+	ReceiveComplete = 1;
+	/*
+	 * Position the Pointer in EEPROM.
+	 */
+	if (sizeof(Address) == 1) {
+		WriteBuffer[0] = (u8) (Address);
+	}
+	else {
+		WriteBuffer[0] = (u8) (Address >> 8);
+		WriteBuffer[1] = (u8) (Address);
+	}
+
+	Status = EepromWriteDataSi5324(sizeof(Address));
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	/*
+	 * Start the IIC device.
+	 */
+	Status = XIic_Start(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	/*
+	 * Receive the Data.
+	 */
+	Status = XIic_MasterRecv(&IicInstance, BufferPtr, ByteCount);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	/*
+	 * Wait till all the data is received.
+	 */
+	while ((ReceiveComplete) || (XIic_IsIicBusy(&IicInstance) == TRUE)) {
+
+	}
+
+	/*
+	 * Stop the IIC device.
+	 */
+	Status = XIic_Stop(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+/*
+ * *********************************************************
+ * EepromReadDataSi53242 with address added as an input parameter
+ * *********************************************************
+ */
+int EepromReadDataSi53242(AddressType addr, u8 *BufferPtr, u16 ByteCount)
+{
+	int Status;
+//	AddressType Address = EEPROM_TEST_START_ADDRESS;
+	AddressType Address;
+	Address = addr;
+
+	/*
+	 * Set the Defaults.
+	 */
+	ReceiveComplete = 1;
+
+	/*
+	 * Position the Pointer in EEPROM.
+	 */
+	if (sizeof(Address) == 1) {
+		WriteBuffer[0] = (u8) (Address);
+	}
+	else {
+		WriteBuffer[0] = (u8) (Address >> 8);
+		WriteBuffer[1] = (u8) (Address);
+	}
+
+	Status = EepromWriteDataSi5324(sizeof(Address));
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Start the IIC device.
+	 */
+	Status = XIic_Start(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Receive the Data.
+	 */
+	Status = XIic_MasterRecv(&IicInstance, BufferPtr, ByteCount);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Wait till all the data is received.
+	 */
+	while ((ReceiveComplete) || (XIic_IsIicBusy(&IicInstance) == TRUE)) {
+
+	}
+
+	/*
+	 * Stop the IIC device.
+	 */
+	Status = XIic_Stop(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+* This function setups the interrupt system so interrupts can occur for the
+* IIC device. The function is application-specific since the actual system may
+* or may not have an interrupt controller. The IIC device could be directly
+* connected to a processor without an interrupt controller. The user should
+* modify this function to fit the application.
+*
+* @param	IicInstPtr contains a pointer to the instance of the IIC device
+*		which is going to be connected to the interrupt controller.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+static int SetupInterruptSystem(XIic * IicInstPtr)
+{
+	int Status;
+
+	if (InterruptController.IsStarted == XIL_COMPONENT_IS_STARTED) {
+		return XST_SUCCESS;
+	}
+
+	/*
+	 * Initialize the interrupt controller driver so that it's ready to use.
+	 */
+	Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect the device driver handler that will be called when an
+	 * interrupt for the device occurs, the handler defined above performs
+	 * the specific interrupt processing for the device.
+	 */
+	Status = XIntc_Connect(&InterruptController, IIC_INTR_ID,
+			       (XInterruptHandler) XIic_InterruptHandler,
+			       IicInstPtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Start the interrupt controller so interrupts are enabled for all
+	 * devices that cause interrupts.
+	 */
+	Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupts for the IIC device.
+	 */
+	XIntc_Enable(&InterruptController, IIC_INTR_ID);
+
+#ifdef __PPC__
+	/*
+	 * Initialize the PPC exception table.
+	 */
+	XExc_Init();
+
+	/*
+	 * Register the interrupt controller handler with the exception table.
+	 */
+	XExc_RegisterHandler(XEXC_ID_NON_CRITICAL_INT,
+			     (XExceptionHandler) XIntc_InterruptHandler,
+			     &InterruptController);
+
+	/*
+	 * Enable non-critical exceptions.
+	 */
+	XExc_mEnableExceptions(XEXC_NON_CRITICAL);
+#endif
+
+#ifdef __MICROBLAZE__
+	/*
+	 * Enable the Microblaze Interrupts.
+	 */
+	microblaze_enable_interrupts();
+#endif
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+* This Send handler is called asynchronously from an interrupt
+* context and indicates that data in the specified buffer has been sent.
+*
+* @param	InstancePtr is not used, but contains a pointer to the IIC
+*		device driver instance which the handler is being called for.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void SendHandler(XIic * InstancePtr)
+{
+	TransmitComplete = 0;
+}
+
+/*****************************************************************************/
+/**
+* This Receive handler is called asynchronously from an interrupt
+* context and indicates that data in the specified buffer has been Received.
+*
+* @param	InstancePtr is not used, but contains a pointer to the IIC
+*		device driver instance which the handler is being called for.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void ReceiveHandler(XIic * InstancePtr)
+{
+	ReceiveComplete = 0;
+}
+
+/*****************************************************************************/
+/**
+* This Status handler is called asynchronously from an interrupt
+* context and indicates the events that have occurred.
+*
+* @param	InstancePtr is a pointer to the IIC driver instance for which
+*		the handler is being called for.
+* @param	Event indicates the condition that has occurred.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void StatusHandler(XIic * InstancePtr, int Event)
+{
+
+}

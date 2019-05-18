@@ -1,0 +1,130 @@
+13:43:11 **** Build of configuration Debug for project ipi_app ****
+make all 
+'Building file: ../src/bram_mem_test_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bram_mem_test_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/bram_mem_test_example.d" -MT"src/bram_mem_test_example.o" -o "src/bram_mem_test_example.o" "../src/bram_mem_test_example.c"
+'Finished building: ../src/bram_mem_test_example.c'
+' '
+'Building file: ../src/ddrx_mem_test_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ddrx_mem_test_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/ddrx_mem_test_example.d" -MT"src/ddrx_mem_test_example.o" -o "src/ddrx_mem_test_example.o" "../src/ddrx_mem_test_example.c"
+'Finished building: ../src/ddrx_mem_test_example.c'
+' '
+'Building file: ../src/hello_clocks.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_clocks.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/hello_clocks.d" -MT"src/hello_clocks.o" -o "src/hello_clocks.o" "../src/hello_clocks.c"
+'Finished building: ../src/hello_clocks.c'
+' '
+'Building file: ../src/hello_iic.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_iic.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/hello_iic.d" -MT"src/hello_iic.o" -o "src/hello_iic.o" "../src/hello_iic.c"
+../src/hello_iic.c: In function 'hello_iic':
+../src/hello_iic.c:363:5: warning: unused variable 'i' [-Wunused-variable]
+ int i;
+     ^
+'Finished building: ../src/hello_iic.c'
+' '
+'Building file: ../src/hello_pmod.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_pmod.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/hello_pmod.d" -MT"src/hello_pmod.o" -o "src/hello_pmod.o" "../src/hello_pmod.c"
+'Finished building: ../src/hello_pmod.c'
+' '
+'Building file: ../src/hello_uart.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_uart.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/hello_uart.d" -MT"src/hello_uart.o" -o "src/hello_uart.o" "../src/hello_uart.c"
+'Finished building: ../src/hello_uart.c'
+' '
+'Building file: ../src/menu.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/menu.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/menu.d" -MT"src/menu.o" -o "src/menu.o" "../src/menu.c"
+'Finished building: ../src/menu.c'
+' '
+'Building file: ../src/mpsoc_mem_test_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mpsoc_mem_test_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/mpsoc_mem_test_example.d" -MT"src/mpsoc_mem_test_example.o" -o "src/mpsoc_mem_test_example.o" "../src/mpsoc_mem_test_example.c"
+'Finished building: ../src/mpsoc_mem_test_example.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/push_button_test.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/push_button_test.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/push_button_test.d" -MT"src/push_button_test.o" -o "src/push_button_test.o" "../src/push_button_test.c"
+'Finished building: ../src/push_button_test.c'
+' '
+'Building file: ../src/xcanps_intr_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xcanps_intr_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xcanps_intr_example.d" -MT"src/xcanps_intr_example.o" -o "src/xcanps_intr_example.o" "../src/xcanps_intr_example.c"
+'Finished building: ../src/xcanps_intr_example.c'
+' '
+'Building file: ../src/xemacps_example_intr_dma.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xemacps_example_intr_dma.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xemacps_example_intr_dma.d" -MT"src/xemacps_example_intr_dma.o" -o "src/xemacps_example_intr_dma.o" "../src/xemacps_example_intr_dma.c"
+../src/xemacps_example_intr_dma.c:156:0: warning: "EMACPS_IRPT_INTR" redefined
+ #define EMACPS_IRPT_INTR XPS_GEM3_INT_ID
+ 
+../src/xemacps_example_intr_dma.c:152:0: note: this is the location of the previous definition
+ #define EMACPS_IRPT_INTR XPS_GEM0_INT_ID
+ 
+../src/xemacps_example_intr_dma.c: In function 'XEmacPsClkSetup':
+../src/xemacps_example_intr_dma.c:1306:6: warning: unused variable 'SlcrTxClkCntrl' [-Wunused-variable]
+  u32 SlcrTxClkCntrl;
+      ^~~~~~~~~~~~~~
+'Finished building: ../src/xemacps_example_intr_dma.c'
+' '
+'Building file: ../src/xemacps_example_util.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xemacps_example_util.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xemacps_example_util.d" -MT"src/xemacps_example_util.o" -o "src/xemacps_example_util.o" "../src/xemacps_example_util.c"
+'Finished building: ../src/xemacps_example_util.c'
+' '
+'Building file: ../src/xgpio_tapp_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+'Finished building: ../src/xgpio_tapp_example.c'
+' '
+'Building file: ../src/xgpiops_polled_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpiops_polled_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xgpiops_polled_example.d" -MT"src/xgpiops_polled_example.o" -o "src/xgpiops_polled_example.o" "../src/xgpiops_polled_example.c"
+'Finished building: ../src/xgpiops_polled_example.c'
+' '
+'Building file: ../src/xscugic_tapp_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xscugic_tapp_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xscugic_tapp_example.d" -MT"src/xscugic_tapp_example.o" -o "src/xscugic_tapp_example.o" "../src/xscugic_tapp_example.c"
+'Finished building: ../src/xscugic_tapp_example.c'
+' '
+'Building file: ../src/xsysmon_polled_printf_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xsysmon_polled_printf_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xsysmon_polled_printf_example.d" -MT"src/xsysmon_polled_printf_example.o" -o "src/xsysmon_polled_printf_example.o" "../src/xsysmon_polled_printf_example.c"
+'Finished building: ../src/xsysmon_polled_printf_example.c'
+' '
+'Building file: ../src/xttcps_intr_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xttcps_intr_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xttcps_intr_example.d" -MT"src/xttcps_intr_example.o" -o "src/xttcps_intr_example.o" "../src/xttcps_intr_example.c"
+'Finished building: ../src/xttcps_intr_example.c'
+' '
+'Building file: ../src/xttcps_tapp_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xttcps_tapp_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xttcps_tapp_example.d" -MT"src/xttcps_tapp_example.o" -o "src/xttcps_tapp_example.o" "../src/xttcps_tapp_example.c"
+'Finished building: ../src/xttcps_tapp_example.c'
+' '
+'Building file: ../src/xwdtps_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xwdtps_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xwdtps_selftest_example.d" -MT"src/xwdtps_selftest_example.o" -o "src/xwdtps_selftest_example.o" "../src/xwdtps_selftest_example.c"
+'Finished building: ../src/xwdtps_selftest_example.c'
+' '
+'Building target: ipi_app.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "ipi_app.elf"  ./src/bram_mem_test_example.o ./src/ddrx_mem_test_example.o ./src/hello_clocks.o ./src/hello_iic.o ./src/hello_pmod.o ./src/hello_uart.o ./src/menu.o ./src/mpsoc_mem_test_example.o ./src/platform.o ./src/push_button_test.o ./src/xcanps_intr_example.o ./src/xemacps_example_intr_dma.o ./src/xemacps_example_util.o ./src/xgpio_tapp_example.o ./src/xgpiops_polled_example.o ./src/xscugic_tapp_example.o ./src/xsysmon_polled_printf_example.o ./src/xttcps_intr_example.o ./src/xttcps_tapp_example.o ./src/xwdtps_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi_app.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size ipi_app.elf  |tee "ipi_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 178184	   9280	  42936	 230400	  38400	ipi_app.elf
+'Finished building: ipi_app.elf.size'
+' '
+
+13:43:31 Build Finished (took 19s.578ms)
+

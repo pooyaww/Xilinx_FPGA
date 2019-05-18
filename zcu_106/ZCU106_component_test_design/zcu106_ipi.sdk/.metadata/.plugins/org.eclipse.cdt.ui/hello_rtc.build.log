@@ -1,0 +1,26 @@
+13:43:32 **** Build of configuration Debug for project hello_rtc ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/xrtcpsu_set_time_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xrtcpsu_set_time_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xrtcpsu_set_time_example.d" -MT"src/xrtcpsu_set_time_example.o" -o "src/xrtcpsu_set_time_example.o" "../src/xrtcpsu_set_time_example.c"
+'Finished building: ../src/xrtcpsu_set_time_example.c'
+' '
+'Building target: hello_rtc.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "hello_rtc.elf"  ./src/platform.o ./src/xrtcpsu_set_time_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_rtc.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size hello_rtc.elf  |tee "hello_rtc.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38348	   2368	  20752	  61468	   f01c	hello_rtc.elf
+'Finished building: hello_rtc.elf.size'
+' '
+
+13:43:35 Build Finished (took 3s.385ms)
+

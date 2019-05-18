@@ -1,0 +1,4 @@
+NumberHits:8
+Timestamp: Fri Aug 24 23:10:53 UTC 2018
+VLNV: xilinx.com:user:gt_freq_counter:1.0
+SynthRuntime: 72

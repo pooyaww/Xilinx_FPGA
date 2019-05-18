@@ -1,0 +1,165 @@
+11:15:58 INFO  : Registering command handlers for SDK TCF services
+11:15:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\zcu106_ipi\zcu106_ipi.sdk\temp_xsdb_launch_script.tcl
+11:16:00 INFO  : XSCT server has started successfully.
+11:16:01 INFO  : Successfully done setting XSCT server connection channel  
+11:16:01 INFO  : Successfully done setting SDK workspace  
+11:16:01 INFO  : Processing command line option -hwspec C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper.hdf.
+13:39:33 INFO  : Invoking Bootgen: bootgen -image blinkbist.bif -arch zynqmp -o C:\zcu106_ipi\zcu106_ipi.sdk\blinkbist\bootimage\BOOT.mcs
+13:39:33 INFO  : Creating new bif file C:\zcu106_ipi\zcu106_ipi.sdk\blinkbist\bootimage\blinkbist.bif
+13:39:48 INFO  : Bootgen command execution is done.
+14:40:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:39 WARN  : SDK version '2018.2' doesn't match hw_server version '2018.3.0'. Some debug features may not work.
+14:40:44 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A3C00F' is selected.
+14:40:44 INFO  : 'jtag frequency' command is executed.
+14:40:44 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+14:40:44 INFO  : Context for 'APU' is selected.
+14:40:44 INFO  : Hardware design information is loaded from 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:40:44 INFO  : 'configparams force-mem-access 1' command is executed.
+14:40:44 INFO  : Context for 'APU' is selected.
+14:40:44 INFO  : Sourcing of 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl' is done.
+14:40:46 INFO  : 'psu_init' command is executed.
+14:40:47 INFO  : 'after 1000' command is executed.
+14:40:47 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+14:40:48 INFO  : 'after 1000' command is executed.
+14:40:48 INFO  : 'psu_ps_pl_reset_config' command is executed.
+14:40:48 INFO  : 'catch {psu_protection}' command is executed.
+14:40:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:40:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:40:50 INFO  : The application 'C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:40:50 INFO  : 'configparams force-mem-access 0' command is executed.
+14:40:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+loadhw -hw C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+source C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+rst -processor
+dow C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:40:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:40:50 INFO  : 'con' command is executed.
+14:40:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+con
+----------------End of Script----------------
+
+14:40:50 INFO  : Launch script is exported to file 'C:\zcu106_ipi\zcu106_ipi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ipi_app.elf_on_local.tcl'
+14:44:58 INFO  : Disconnected from the channel tcfchan#1.
+14:44:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:45:07 WARN  : SDK version '2018.2' doesn't match hw_server version '2018.3.0'. Some debug features may not work.
+14:45:13 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A3C00F' is selected.
+14:45:13 INFO  : 'jtag frequency' command is executed.
+14:45:13 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+14:45:14 INFO  : Context for 'APU' is selected.
+14:45:14 INFO  : Hardware design information is loaded from 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:45:14 INFO  : 'configparams force-mem-access 1' command is executed.
+14:45:14 INFO  : Context for 'APU' is selected.
+14:45:14 INFO  : Sourcing of 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl' is done.
+14:45:15 INFO  : 'psu_init' command is executed.
+14:45:16 INFO  : 'after 1000' command is executed.
+14:45:16 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+14:45:17 INFO  : 'after 1000' command is executed.
+14:45:18 INFO  : 'psu_ps_pl_reset_config' command is executed.
+14:45:18 INFO  : 'catch {psu_protection}' command is executed.
+14:45:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:45:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:45:19 INFO  : The application 'C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:45:19 INFO  : 'configparams force-mem-access 0' command is executed.
+14:45:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+loadhw -hw C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+source C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+rst -processor
+dow C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:45:20 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:45:20 INFO  : 'con' command is executed.
+14:45:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+con
+----------------End of Script----------------
+
+14:45:20 INFO  : Launch script is exported to file 'C:\zcu106_ipi\zcu106_ipi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ipi_app.elf_on_local.tcl'
+14:49:44 INFO  : Disconnected from the channel tcfchan#2.
+14:49:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:49:53 WARN  : SDK version '2018.2' doesn't match hw_server version '2018.3.0'. Some debug features may not work.
+14:49:53 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A3C00F' is selected.
+14:49:53 INFO  : 'jtag frequency' command is executed.
+14:49:53 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+14:49:53 INFO  : Context for 'APU' is selected.
+14:49:54 INFO  : Hardware design information is loaded from 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf'.
+14:49:54 INFO  : 'configparams force-mem-access 1' command is executed.
+14:49:54 INFO  : Context for 'APU' is selected.
+14:49:54 INFO  : Sourcing of 'C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl' is done.
+14:49:55 INFO  : 'psu_init' command is executed.
+14:49:56 INFO  : 'after 1000' command is executed.
+14:49:56 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+14:49:57 INFO  : 'after 1000' command is executed.
+14:49:57 INFO  : 'psu_ps_pl_reset_config' command is executed.
+14:49:57 INFO  : 'catch {psu_protection}' command is executed.
+14:49:57 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:49:57 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:49:59 INFO  : The application 'C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:49:59 INFO  : 'configparams force-mem-access 0' command is executed.
+14:49:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+loadhw -hw C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+source C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+rst -processor
+dow C:/zcu106_ipi/zcu106_ipi.sdk/ipi_app/Debug/ipi_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:49:59 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:49:59 INFO  : 'con' command is executed.
+14:49:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A3C00F"} -index 1
+con
+----------------End of Script----------------
+
+14:49:59 INFO  : Launch script is exported to file 'C:\zcu106_ipi\zcu106_ipi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ipi_app.elf_on_local.tcl'
+13:38:27 INFO  : Disconnected from the channel tcfchan#3.
+13:38:44 INFO  : Registering command handlers for SDK TCF services
+13:38:45 INFO  : Launching XSCT server: xsct.bat -interactive C:\zcu106_ipi\zcu106_ipi.sdk\temp_xsdb_launch_script.tcl
+13:38:47 INFO  : XSCT server has started successfully.
+13:38:47 INFO  : Successfully done setting XSCT server connection channel  
+13:38:47 INFO  : Successfully done setting SDK workspace  
+13:38:48 INFO  : Processing command line option -hwspec C:/zcu106_ipi/zcu106_ipi.sdk/system_wrapper.hdf.
+13:38:48 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+13:50:00 INFO  : Invoking Bootgen: bootgen -image blinkbist.bif -arch zynqmp -o C:\zcu106_ipi\zcu106_ipi.sdk\blinkbist\bootimage\BOOT.mcs -w on
+13:50:16 INFO  : Bootgen command execution is done.

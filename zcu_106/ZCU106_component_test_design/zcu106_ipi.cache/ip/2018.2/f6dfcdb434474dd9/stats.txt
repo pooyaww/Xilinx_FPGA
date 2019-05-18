@@ -1,0 +1,4 @@
+NumberHits:4
+Timestamp: Fri Aug 24 23:06:05 UTC 2018
+VLNV: xilinx.com:ip:diff_freq_counter:1.0
+SynthRuntime: 69

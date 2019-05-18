@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:c:/zcu106_ipi/zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc rfile:../../../zcu106_ipi.srcs/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:55 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AC18 [get_ports i2c_sclk]
+set_property src_info {type:SCOPED_XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA19 [get_ports i2c_sda]
+set_property src_info {type:SCOPED_XDC file:1 line:61 export:INPUT save:INPUT read:READ} [current_design]
+set_property LOC SYSMONE4_X0Y0 [get_cells -hier {*inst_sysmon} -filter {NAME =~ *inst_sysmon}]

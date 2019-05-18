@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Mon Sep  3 13:38:28 2018
+# Process ID: 36320
+# Current directory: C:/zcu106_ipi/zcu106_ipi.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/zcu106_ipi/zcu106_ipi.sdk/webtalk/webtalk.log
+# Journal file: C:/zcu106_ipi/zcu106_ipi.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

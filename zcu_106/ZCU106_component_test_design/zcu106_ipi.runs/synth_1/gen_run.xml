@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1535154097">
+  <File Type="PA-TCL" Name="system_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="system_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="system_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="system_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="system_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="system_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="system_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/system_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/system/hdl/system_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1490120905"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="system_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/system.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/system.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_bram_ctrl_0_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC0_GBTCLK1_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC1_GBTCLK0_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_diff_freq_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_diff_freq_counter_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_USER_MGT_SI570_CLOCK1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_diff_freq_counter_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_USER_MGT_SI570_CLOCK2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_diff_freq_counter_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_diff_freq_counter_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC0_GBTCLK0_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gt_freq_counter_9_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_push_buttons_5bits_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_microblaze_0_xlconcat_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_system_management_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC0_CLK0_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_HDMI_CTL_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_HDMI_TX_SRC_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_HDMI_RX_CLK_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_PMOD_IN_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_PMOD_OUT_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_CLK_125_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_ps8_0_99M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_CLK_74_25_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC0_CLK1_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ddr4_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_FMC_HPC1_CLK0_M2C_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_HDMI_SI5324_OUT_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_SFP_SI5328_OUT_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_USER_SMA_MGT_CLOCK_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_dip_switches_8bits_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_iic0_pl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_iic1_pl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_led_8bits_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_uart2_pl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_ddr4_0_266M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_util_ds_buf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_11"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_11"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_0"/>
+</GenRun>

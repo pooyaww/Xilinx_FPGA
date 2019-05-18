@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_zu7ev (64-bit)
+# SW Build 1739137 on Thu Dec 22 17:03:13 MST 2016
+# IP Build 1739168 on Thu Dec 22 18:54:47 MST 2016
+# Start of session at: Tue Jan 24 09:38:44 2017
+# Process ID: 9320
+# Current directory: C:/zcu106_ipi/zcu106_ipi.runs/system_ddr4_0_0_synth_1
+# Command line: vivado.exe -log system_ddr4_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ddr4_0_0.tcl
+# Log file: C:/zcu106_ipi/zcu106_ipi.runs/system_ddr4_0_0_synth_1/system_ddr4_0_0.vds
+# Journal file: C:/zcu106_ipi/zcu106_ipi.runs/system_ddr4_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------

@@ -1,0 +1,254 @@
+#include "set_si5324.h"
+#include "xiicps.h"
+
+#define XIIC_GPO_REG_OFFSET	0x124
+
+extern void si5328_write_freq(XIicPs *Iic, u8 Addr, DSPLL_struct *DSPLL);
+extern int  iicps_init(XIicPs *Iic, u16 iic_device_id);
+
+
+
+
+void si5324_set_freq_148_5MHz()
+{
+    DSPLL_struct DSPLL;
+
+    DSPLL.oFreq[0] = 125.000000;
+    DSPLL.oFreq[1] = 125.000000;
+    DSPLL.oFreq[2] = 125.000000;
+    DSPLL.oFreq[3] = 125.000000;
+    DSPLL.iFreq[0] = 125.000000;
+    DSPLL.iFreq[1] = 114.285000;
+    DSPLL.iFreq[2] = 125.000000;
+    DSPLL.iFreq[3] = 125.000000;
+    DSPLL.N1 = 40;
+    DSPLL.N1_HS = 10;
+    DSPLL.NC1_LS = 4;
+    DSPLL.NC2_LS = 4;
+    DSPLL.NC3_LS = 4;
+    DSPLL.NC4_LS = 4;
+    DSPLL.NC5_LS = 4;
+    DSPLL.N2 = 1000000;
+    DSPLL.N2_HS = 5;
+    DSPLL.N2_LS = 200000;
+    DSPLL.N31 = 25000;
+    DSPLL.N32 = 22857;
+    DSPLL.N33 = 25000;
+    DSPLL.N34 = 25000;
+    DSPLL.BWSEL = 1;
+    DSPLL.DSBL1 = 0;
+    DSPLL.DSBL2 = 0;
+    DSPLL.DSBL3 = 0;
+    DSPLL.DSBL4 = 0;
+    DSPLL.DSBL5 = 0;
+    DSPLL.CLKIN1RATE = 3;
+    DSPLL.CLKIN2RATE = 3;
+    DSPLL.CLKIN3RATE = 3;
+    DSPLL.CLKIN4RATE = 3;
+
+	int done, Status;
+	int i;
+    	XIicPs *Iic;
+    	XIicPs_Config *ConfigPtr_0;	/* Pointer to IIC 0 configuration data */
+
+	/*
+	 * Initialize the IIC Bus
+	 */
+	ConfigPtr_0 = XIicPs_LookupConfig(XPAR_HDMI_CTL_DEVICE_ID);
+	if (ConfigPtr_0 == NULL) {
+		printf("XIicPs_LookupConfig failure \r\n");
+		return XST_FAILURE;
+	}
+        
+	printf("Exit XIicPs_LookupConfig \r\n");
+	Status = XIicPs_CfgInitialize(&Iic, ConfigPtr_0,
+			ConfigPtr_0->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		printf("XIicPs_CfgInitialize failure \r\n");
+		return XST_FAILURE;
+	}
+
+	// Generate GPIO Reset sequence for the IIC Devices
+	XIicPs_WriteReg(ConfigPtr_0->BaseAddress, XIIC_GPO_REG_OFFSET, 0xFFFFFFFF);	// bit0 = 1
+	for(i=0;i<100000;i++);	// delay
+	XIicPs_WriteReg(ConfigPtr_0->BaseAddress, XIIC_GPO_REG_OFFSET, 0xFFFFFFFE);	// bit0 = 0
+	for(i=0;i<100000;i++);	// delay
+	XIicPs_WriteReg(ConfigPtr_0->BaseAddress, XIIC_GPO_REG_OFFSET, 0xFFFFFFFF);	// bit0 = 1
+
+	printf("Exit GPIO Reset sequence \r\n");
+
+	printf("Enter iicps_init \r\n");
+	Status = iicps_init(&Iic, XPAR_HDMI_CTL_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+	    printf("Failed to Initialize PS-side IIC \n\r");
+	return 1;
+	}
+
+	printf("Exit iicps_init \r\n");
+
+	/* Write New Frequency Settings */
+	si5328_write_freq(Iic, (u8)0x68, &DSPLL);
+
+   return;
+}
+
+void si5328_write_freq(XIicPs *Iic, u8 Addr, DSPLL_struct *DSPLL)
+{
+	int Status;
+	u8  reg[60];
+	u8  i;
+	int NC1_LS, NC2_LS;
+	int N2_LS, N31, N32;
+
+	printf("Enter si5328_write_freq \r\n");
+	/*
+	 * Change from human readable settings to Si5368 programming values
+	 */
+	reg[0]  = 0x54;                                                         // 0101_0100 - FREE_RUN
+	reg[1]  = 0xE1;                                                         // 1110_0001 - CLOCK_PRIORITY
+	//ORIG reg[2]  = (DSPLL->BWSEL & 0x0F)*32 + 0x02;                              // xxxx_0010 - BWSEL[3:0], 4'b0010;
+	reg[2]  = (DSPLL->BWSEL & 0x0F)*16 + 0x02;                              // xxxx_0010 - BWSEL[3:0], 4'b0010;
+	reg[3]  = 0x55;                                                         // 0101_0101 - CKSEL, DHOLD, SQ_ICAL, 4'b0101
+	reg[4]  = 0x12;                                                         // 0001_0010 - AUTOSEL, HIST_DEL
+	reg[5]  = 0x2D;                                                         // 0010_1101 - ICMOS, 6'b101101
+	reg[6]  = 0x3F;                                                         // 0011_1111 - SLEEP,SFOUT2,SFOUT1
+	reg[7]  = 0x28;                                                         // 0010_1000 - 5'b00101,FOSREFSEL
+	reg[8]  = 0x00;                                                         // 0000_0000 - HLOG2,HLOG1,4'b0000
+	reg[9]  = 0xC0;                                                         // 1100_0000 - HIST_AVG,3'b000
+	reg[10] = DSPLL->DSBL2*8  + DSPLL->DSBL1*4;                             // 0000_xx00 - 4'b0000,DSBL[2:1],2'b00
+    reg[11] = 0x40;                                                         // 0100_0000 - 6'b010000,PD_CK[2:1]
+
+	reg[19] = 0x2C;                                                         // 0010_1100 - FOS_EN..LOCT
+	reg[20] = 0x3E;                                                         // 0011_1110 - CK#_BAD,LOL_PIN,INT_PIN
+	reg[21] = 0xFC;                                                         // 1111_1100 - 6'b111111,CK1_ACTV,CKSEL_PIN
+	reg[22] = 0xDF;                                                         // 1101_1111 - 4'b1101, CK_ACTV_POL..INT_POL
+	reg[23] = 0x1F;                                                         // 0001_1111 - LOS#_MSK
+	reg[24] = 0x3F;                                                         // 0011_1111 - 5'b00111,LOL#_MSK
+	reg[25] = (DSPLL->N1_HS-4)*32;                                          // xxx0_0000 - N1_HS[2:0],5'b00000
+
+	NC1_LS  = DSPLL->NC1_LS-1;                                              // Subtract 1 for register write
+	reg[31] = (NC1_LS & 0x0F0000)/two_to_16;                                // 0000_xxxx - NC1_LS[19:16]
+	reg[32] = (NC1_LS & 0x00FF00)/two_to_8;                                 // xxxx_xxxx - NC1_LS[15:8]
+	reg[33] = (NC1_LS & 0x0000FF);                                          // xxxx_xxxx - NC1_LS[7:0]
+
+	NC2_LS  = DSPLL->NC2_LS-1;                                              // Subtract 1 for register write
+	reg[34] = (NC2_LS & 0x0F0000)/two_to_16;                                // 0000_xxxx - NC2_LS[19:16]
+	reg[35] = (NC2_LS & 0x00FF00)/two_to_8;                                 // xxxx_xxxx - NC2_LS[15:8]
+	reg[36] = (NC2_LS & 0x0000FF);                                          // xxxx_xxxx - NC2_LS[7:0]
+
+	N2_LS   = DSPLL->N2_LS-1;                                               // Subtract 1 for register write
+	reg[40] = (DSPLL->N2_HS-4)*32 + (N2_LS & 0x0F0000)/two_to_16;           // xxx0_xxxx - N2_HS[2:0],1'b0,N2_LS[19:16]
+	reg[41] = (N2_LS & 0x00FF00)/two_to_8;                                  // xxxx_xxxx - N2_LS[15:8]
+	reg[42] = (N2_LS & 0x0000FF);                                           // xxxx_xxxx - N2_LS[7:0]
+
+	N31     = DSPLL->N31-1;                                                 // Subtract 1 for register write
+	reg[43] = (N31   & 0x070000)/two_to_16;                                 // 0000_0xxx - N31[18:16]
+	reg[44] = (N31   & 0x00FF00)/two_to_8;                                  // xxxx_xxxx - N31[15:8]
+	reg[45] = (N31   & 0x0000FF);                                           // xxxx_xxxx - N31[7:0]
+
+	N32     = DSPLL->N32-1;                                                 // Subtract 1 for register write
+	reg[46] = (N32   & 0x070000)/two_to_16;                                 // 0000_0xxx - N32[18:16]
+	reg[47] = (N32   & 0x00FF00)/two_to_8;                                  // xxxx_xxxx - N32[15:8]
+	reg[48] = (N32   & 0x0000FF);                                           // xxxx_xxxx - N32[7:0]
+
+	reg[55] = (DSPLL->CLKIN2RATE & 0x07) * 8 + (DSPLL->CLKIN1RATE & 0x07);  // 00xx_xxxx - 2'b00,C2R[2:0],C1R[2:0]
+
+	/*
+	 * Wait until bus is idle and then write all values
+	 */
+
+	printf("Enter XIicPs_BusIsBusy \r\n");
+	//while (XIicPs_BusIsBusy(Iic));
+	printf("Exit XIicPs_BusIsBusy \r\n");
+
+	for (i=0;i<=11;i++) {
+	   Status = XIicPs_MasterSendPolled(Iic, (u8[]){  i,reg[i] }, 2, Addr);
+	}
+
+	for (i=19;i<=25;i++) {
+	   Status = XIicPs_MasterSendPolled(Iic, (u8[]){  i,reg[i] }, 2, Addr);
+	}
+
+	for (i=31;i<=36;i++) {
+	   Status = XIicPs_MasterSendPolled(Iic, (u8[]){  i,reg[i] }, 2, Addr);
+	}
+
+	for (i=40;i<=48;i++) {
+	   Status = XIicPs_MasterSendPolled(Iic, (u8[]){  i,reg[i] }, 2, Addr);
+	}
+
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){ 55,reg[55]}, 2, Addr);           //  55:CLKIN#RATE
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){131,0x18   }, 2, Addr);           // 131:LOS#_FLAG
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){132,0x00   }, 2, Addr);           // 132:FOS#_FLAG
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){137,0x00   }, 2, Addr);           // 137:FASTLOCK
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){138,0x0F   }, 2, Addr);           // 138:LOS#_EN[1]
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){139,0xFF   }, 2, Addr);           // 139:LOS#_EN[0],FOS#_EN
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){142,0x00   }, 2, Addr);           // 142:IND_SKEW1
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){143,0x00   }, 2, Addr);           // 143:IND_SKEW2
+
+	Status = XIicPs_MasterSendPolled(Iic, (u8[]){136,0x40   }, 2, Addr);           // 136:RESET,ICAL
+
+    printf("\n\r");
+	if (Status == 0) return;
+
+}
+/*****************************************************************************
+*
+* Initialize the PS-side IIC peripheral and driver
+*
+* @param	DeviceId is the Device ID of the IicPs Device and is the
+*		XPAR_<IICPS_instance>_DEVICE_ID value from xparameters.h
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None.
+*
+*******************************************************************************/
+int iicps_init(XIicPs *Iic, u16 DeviceId)
+{
+	int sys_errno;
+	int Status;
+	XIicPs_Config *Config;
+
+	/*
+	 * Initialize the IIC driver so that it's ready to use
+	 * Look up the configuration in the config table,
+	 * then initialize it.
+	 */
+	Config = XIicPs_LookupConfig(DeviceId);
+	if (NULL == Config) {
+		xil_printf("XIicPs_LookupConfig Failed\r\n");
+        sys_errno = ERR_IIC_INIT_1;
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_CfgInitialize(Iic, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XIicPs_CfgInitialize Failed\r\n");
+        sys_errno = ERR_IIC_INIT_2;
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built correctly.
+	 */
+	Status = XIicPs_SelfTest(Iic);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XIicPs_SelfTest Failed\r\n");
+        sys_errno = ERR_IIC_INIT_3;
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Set the IIC serial clock rate.
+	 */
+	Status = XIicPs_SetSClk(Iic, 100000);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XIicPs_SetSClk Failed\r\n");
+        sys_errno = ERR_IIC_INIT_4;
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+

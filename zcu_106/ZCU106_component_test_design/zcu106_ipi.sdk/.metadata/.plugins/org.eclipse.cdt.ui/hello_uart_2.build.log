@@ -1,0 +1,26 @@
+13:46:48 **** Build of configuration Debug for project hello_uart_2 ****
+make all 
+'Building file: ../src/hello_uart.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hello_uart.o" -I../../standalone_bsp_2/psu_cortexa53_0/include -MMD -MP -MF"src/hello_uart.d" -MT"src/hello_uart.o" -o "src/hello_uart.o" "../src/hello_uart.c"
+'Finished building: ../src/hello_uart.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_2/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hello_uart_2.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_2/psu_cortexa53_0/lib -o "hello_uart_2.elf"  ./src/hello_uart.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_uart_2.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size hello_uart_2.elf  |tee "hello_uart_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35220	   2352	  20632	  58204	   e35c	hello_uart_2.elf
+'Finished building: hello_uart_2.elf.size'
+' '
+
+13:46:51 Build Finished (took 2s.971ms)
+

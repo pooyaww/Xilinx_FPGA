@@ -1,0 +1,8 @@
+//arch = zynqmp; split = false; format = MCS
+the_ROM_image:
+{
+	[fsbl_config]a53_x64
+	[bootloader]C:\zcu106_ipi\zcu106_ipi.sdk\zynq_mp_fsbl\Debug\zynq_mp_fsbl.elf
+	[destination_device = pl]C:\zcu106_ipi\zcu106_ipi.sdk\system_wrapper_hw_platform_0\system_wrapper.bit
+	[destination_cpu = a53-0]C:\zcu106_ipi\zcu106_ipi.sdk\blinkbist\Debug\blinkbist.elf
+}
